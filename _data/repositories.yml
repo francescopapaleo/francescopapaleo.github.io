@@ -1,14 +1,11 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - francescopapaleo
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - francescopapaleo/neural-audio-spring-reverb
+  - mir-dataset-loaders/mirdata
+  - Neutone/neutone_sdk
+  - francescopapaleo/vowel-recognition
+  
