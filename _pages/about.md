@@ -1,20 +1,24 @@
 ---
 layout: about
 title: about
-permalink: /
-subtitle: <a href='#'>Affiliations</a>. Listening on the shoulders of giants.
+permalink: /about/
+nav: true
+nav_order: 3
+subtitle: Listening on the shoulders of giants.
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: 
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Paris / Barcelona / Bologna</p>
 
-news: true # includes a list of news items
+news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+social: false # includes social icons at the bottom of the page
 ---
+
+# Francesco Papaleo
 
 My journey has started as a sound engineer, for over 15 years I have been working in the music industry, on worldwide tours as well as in studio or interactive installations. My approach has always been to merge art and creativity with technology, employing cutting-edge DSP software and hardware to deliver unparalleled auditory experiences in the diverse settings I have worked in.
 
