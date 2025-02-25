@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Neural Audio Spring Reverb
-description:
-img:
+description: Audio plugin and research paper for DAFx 2024
+img: assets/img/neutone.png
 importance: 3
 category: creation
 ---
