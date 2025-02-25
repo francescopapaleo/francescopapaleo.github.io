@@ -2,7 +2,7 @@
 layout: page
 title: Concrete Bologna Elettroacustica
 description:
-img: 
+img:
 importance: 5
 category:
 ---

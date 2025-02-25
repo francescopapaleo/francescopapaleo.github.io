@@ -4,7 +4,7 @@ title: oh!theladystone
 description:
 img:
 importance: 4
-category:  creation
+category: creation
 ---
 
 Every project has a beautiful feature showcase page.
