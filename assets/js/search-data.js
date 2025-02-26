@@ -36,7 +36,7 @@ ninja.data = [{
       },
     },{id: "projects-bvio",
           title: 'BVIO',
-          description: "",
+          description: "We&#39;ve run out of good feelings.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/bvio/";
             },},{id: "projects-concrete-bologna-elettroacustica",
@@ -46,7 +46,7 @@ ninja.data = [{
               window.location.href = "/projects/concrete/";
             },},{id: "projects-fuck-war",
           title: 'Fuck War',
-          description: "",
+          description: "Call for Artist",
           section: "Projects",handler: () => {
               window.location.href = "/projects/fuckwar/";
             },},{id: "projects-oh-theladystone",
@@ -56,7 +56,7 @@ ninja.data = [{
               window.location.href = "/projects/otls/";
             },},{id: "projects-neural-audio-spring-reverb",
           title: 'Neural Audio Spring Reverb',
-          description: "",
+          description: "Audio plugin and research paper for DAFx 2024",
           section: "Projects",handler: () => {
               window.location.href = "/projects/springreverb/";
             },},{
