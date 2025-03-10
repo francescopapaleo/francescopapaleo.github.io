@@ -36,27 +36,27 @@ ninja.data = [{
       },
     },{id: "projects-bvio",
           title: 'BVIO',
-          description: "DJ set and music installation.",
+          description: "DJ set and music installation",
           section: "Projects",handler: () => {
               window.location.href = "/projects/bvio/";
             },},{id: "projects-concrete-bologna-elettroacustica",
           title: 'Concrete Bologna Elettroacustica',
-          description: "Electro-acoustic and acousmatic music collective.",
+          description: "Electro-acoustic and acousmatic music collective",
           section: "Projects",handler: () => {
               window.location.href = "/projects/concrete/";
             },},{id: "projects-fuck-war",
           title: 'Fuck War',
-          description: "Music for the Call for Artist.",
+          description: "Music for the Call for Artist",
           section: "Projects",handler: () => {
               window.location.href = "/projects/fuckwar/";
             },},{id: "projects-non-vengo-dalla-luna",
           title: 'Non Vengo dalla Luna',
-          description: "Theater performance.",
+          description: "Theater performance",
           section: "Projects",handler: () => {
               window.location.href = "/projects/nvdl/";
             },},{id: "projects-oh-theladystone",
           title: 'oh!theladystone',
-          description: "Indietronica band.",
+          description: "Indietronica band",
           section: "Projects",handler: () => {
               window.location.href = "/projects/otls/";
             },},{id: "projects-neural-audio-spring-reverb",
