@@ -1,7 +1,7 @@
 ---
 layout: page
 title: BVIO
-description: DJ set and music installation.
+description: DJ set and music installation
 img: assets/img/bvio.png
 importance: 2
 category: installation
