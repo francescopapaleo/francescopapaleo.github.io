@@ -1,11 +1,15 @@
 ---
 layout: page
 title: BVIO
-description: We've run out of good feelings.
+description: DJ set and music installation.
 img: assets/img/bvio.png
 importance: 2
 category: installation
 ---
+
+_Abbiamo finito i buoni sentimenti_
+
+[We've run out of good feelings.]
 
 An installation project in a temporary space from the 2nd to the 5th of February 2023.
 
