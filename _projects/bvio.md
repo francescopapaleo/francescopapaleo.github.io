@@ -15,4 +15,4 @@ Palazzo Sassoli | Vicolo Bolognetti 18 | Bologna
 
 CHEAP asked this small circle to participate in a game, to share a few words, a few obsessions, a few visions: strictly in the dark.
 
-Head to their [website](https://www.cheapfestival.it/bvio-_-abbiamo-finito-i-buoni-sentimenti/) they're amazing, in the dark as in the light.
+Head to their [website](https://www.cheapfestival.it/bvio-un-progetto-di-cheap-dal-2-al-5-febbraio-a-bologna/) they're amazing, in the dark as in the light.
