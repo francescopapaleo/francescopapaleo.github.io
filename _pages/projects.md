@@ -1,7 +1,9 @@
 ---
 layout: page
 title: projects
-permalink: /
+permalink: /projects/
+nav: true
+nav_order: 2
 description: What keeps me alive.
 display_categories: [work, fun]
 horizontal: false
