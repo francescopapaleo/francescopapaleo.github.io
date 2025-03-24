@@ -3,25 +3,25 @@ const ninja = document.querySelector('ninja-keys');
 
 // add the home and posts menu items
 ninja.data = [{
-    id: "nav-projects",
-    title: "projects",
+    id: "nav-about",
+    title: "about",
     section: "Navigation",
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-blog",
+  },{id: "nav-projects",
+          title: "projects",
+          description: "What keeps me alive.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-blog",
           title: "blog",
           description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/blog/";
-          },
-        },{id: "nav-about",
-          title: "about",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/about/";
           },
         },{id: "post-sparse-thoughts-in-the-latent-space",
       
@@ -79,46 +79,11 @@ ninja.data = [{
           window.open("https://github.com/francescopapaleo", "_blank");
         },
       },{
-        id: 'social-instagram',
-        title: 'Instagram',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://instagram.com/francesco.papaleo.music", "_blank");
-        },
-      },{
         id: 'social-linkedin',
         title: 'LinkedIn',
         section: 'Socials',
         handler: () => {
           window.open("https://www.linkedin.com/in/francescopapaleo", "_blank");
-        },
-      },{
-        id: 'social-medium',
-        title: 'Medium',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://medium.com/@francescopapaleo", "_blank");
-        },
-      },{
-        id: 'social-orcid',
-        title: 'ORCID',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://orcid.org/0009-0003-7903-0201", "_blank");
-        },
-      },{
-        id: 'social-rss',
-        title: 'RSS Feed',
-        section: 'Socials',
-        handler: () => {
-          window.open("/feed.xml", "_blank");
-        },
-      },{
-        id: 'social-scholar',
-        title: 'Google Scholar',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://scholar.google.com/citations?user=sTf2rzcAAAAJ&hl", "_blank");
         },
       },{
         id: 'social-soundcloud_username',
