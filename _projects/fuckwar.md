@@ -2,7 +2,7 @@
 layout: page
 title: Fuck War
 description: Music for the Call for Artist
-img: assets/img/fuck_war.png
+img: assets/img/fuck_war.webp
 importance: 1
 category: creation
 ---

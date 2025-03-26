@@ -2,7 +2,7 @@
 layout: page
 title: oh!theladystone
 description: Indietronica band
-img: assets/img/otls.png
+img: assets/img/otls.webp
 importance: 4
 category: creation
 ---
