@@ -36,7 +36,7 @@ ninja.data = [{
       },
     },{id: "projects-bvio",
           title: 'BVIO',
-          description: "DJ set and music installation",
+          description: "DJ set and temporay art installation",
           section: "Projects",handler: () => {
               window.location.href = "/projects/bvio/";
             },},{id: "projects-concrete-bologna-elettroacustica",
