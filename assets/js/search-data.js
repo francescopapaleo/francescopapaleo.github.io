@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "post-sparse-thoughts-in-the-latent-space",
+        },{id: "post-sonification",
+      
+        title: "Sonification",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/sonification/";
+        
+      },
+    },{id: "post-sparse-thoughts-in-the-latent-space",
       
         title: 'Sparse Thoughts in the Latent Space <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
       
@@ -34,21 +45,11 @@ ninja.data = [{
           window.open("https://medium.com/@francescopapaleo/sparse-thoughts-in-the-latent-space-1463b1156407?source=rss-3c7b514a84d5------2", "_blank");
         
       },
-    },{id: "projects-bvio",
-          title: 'BVIO',
-          description: "DJ set and temporay art installation",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/bvio/";
-            },},{id: "projects-concrete-bologna-elettroacustica",
+    },{id: "projects-concrete-bologna-elettroacustica",
           title: 'Concrete Bologna Elettroacustica',
           description: "Electro-acoustic and acousmatic music collective",
           section: "Projects",handler: () => {
               window.location.href = "/projects/concrete/";
-            },},{id: "projects-fuck-war",
-          title: 'Fuck War',
-          description: "Music for the Call for Artist",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/fuckwar/";
             },},{id: "projects-non-vengo-dalla-luna",
           title: 'Non Vengo dalla Luna',
           description: "Theater performance",
@@ -59,11 +60,31 @@ ninja.data = [{
           description: "Indietronica band",
           section: "Projects",handler: () => {
               window.location.href = "/projects/otls/";
+            },},{id: "projects-indigo",
+          title: 'Indigo',
+          description: "DJ collective",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/indigo/";
+            },},{id: "projects-bvio",
+          title: 'BVIO',
+          description: "DJ set and temporay art installation",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/bvio/";
             },},{id: "projects-neural-audio-spring-reverb",
           title: 'Neural Audio Spring Reverb',
           description: "Audio plugin and research paper for DAFx 2024",
           section: "Projects",handler: () => {
               window.location.href = "/projects/springreverb/";
+            },},{id: "projects-fuck-war",
+          title: 'Fuck War',
+          description: "Music for the Call for Artist",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/fuckwar/";
+            },},{id: "projects-dj",
+          title: 'DJ',
+          description: "If I can&#39;t dance it&#39;s not my revolution",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/dj/";
             },},{
         id: 'social-email',
         title: 'email',
