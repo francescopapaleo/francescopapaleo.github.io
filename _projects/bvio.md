@@ -2,8 +2,8 @@
 layout: page
 title: BVIO
 description: DJ set and temporay art installation
-img: assets/img/bvio.webp
-importance: 2
+img: /assets/img/bvio.webp
+date: 2023-02-04
 category: installation
 ---
 

@@ -2,8 +2,8 @@
 layout: page
 title: Concrete Bologna Elettroacustica
 description: Electro-acoustic and acousmatic music collective
-img: assets/img/concrete.png
-importance: 5
+img: /assets/img/concrete.webp
+date: 2008-01-01
 category:
 ---
 

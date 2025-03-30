@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <h4>Listen on the shoulders of giants.</h4>
+subtitle: Listen on the shoulders of giants.
 
 profile:
   align: right
@@ -18,7 +18,7 @@ social: true # includes social icons at the bottom of the page
 
 # Francesco Papaleo
 
-<img src="/assets/img/chloe-470A4344.webp" alt="Chloe Shooting 470A4344" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+<img src="/assets/img/470A4344-chloepernet.webp" alt="Chloe Shooting 470A4344" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
 <div style="text-align: right; font-size: 0.8em; color: #888; margin-bottom: 25px;">
   Photo credit: Chloé Pernet
 </div>
