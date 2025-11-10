@@ -1,0 +1,62 @@
+{{- define "title" -}}
+    {{- .Params.Title | default (T .Section) | default .Section }} - {{ .Site.Title -}}
+{{- end -}}
+
+{{- define "content" -}}
+    <div class="page projects-archive">
+        <h1 class="projects-archive__title animate__animated animate__pulse animate__faster">
+            {{- .Params.Title | default (T .Section) | default .Section -}}
+        </h1>
+
+        {{- with .Content -}}
+            <div class="projects-archive__intro">
+                {{- . | safeHTML -}}
+            </div>
+        {{- end -}}
+
+        {{- if .Pages -}}
+            {{- $groups := .Pages.GroupByDate "2006" -}}
+            {{- range $groups -}}
+                <section class="projects-year">
+                    <h2 class="projects-year__heading">{{ .Key }}</h2>
+                    <div class="projects-grid">
+                        {{- range .Pages -}}
+                            {{- $thumb := .Params.thumbnail | default .Params.featuredimage | default .Params.featuredImage | default "" -}}
+                            <article class="project-card">
+                                <a class="project-card__link" href="{{ .RelPermalink }}">
+                                    <div class="project-card__thumb">
+                                        {{- if $thumb -}}
+                                            {{- partial "plugin/img.html" (dict
+                                                "Src" $thumb
+                                                "Alt" (.Params.featuredimageAlt | default .Title)
+                                                "Title" .Title
+                                                "Class" "project-card__image"
+                                                "Resources" .Resources
+                                                "Linked" false
+                                            ) -}}
+                                        {{- else -}}
+                                            <div class="project-card__placeholder" aria-hidden="true">
+                                                <span>{{ .Title }}</span>
+                                            </div>
+                                        {{- end -}}
+                                    </div>
+                                    <div class="project-card__body">
+                                        <h3 class="project-card__title">{{ .Title }}</h3>
+                                        {{- with .Params.description -}}
+                                            <p class="project-card__description">{{ . }}</p>
+                                        {{- else -}}
+                                            {{- with .Summary -}}
+                                                <p class="project-card__description">{{ . | plainify | truncate 120 }}</p>
+                                            {{- end -}}
+                                        {{- end -}}
+                                    </div>
+                                </a>
+                            </article>
+                        {{- end -}}
+                    </div>
+                </section>
+            {{- end -}}
+        {{- end -}}
+    </div>
+{{- end -}}
+

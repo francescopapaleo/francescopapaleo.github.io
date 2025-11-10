@@ -1,0 +1,26 @@
+<footer class="site-footer">
+    <section class="copyright">
+        &copy;
+        {{ with .Site.Params.footer.since }}
+            {{ if ne . (int (now.Format "2006")) }}
+                {{ . }} –
+            {{ end }}
+        {{ end }}
+        {{ now.Format "2006" }} Francesco Papaleo
+    </section>
+
+    <section class="powerby">
+        <span>
+            Content licensed under
+            <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">
+                CC BY-SA 4.0
+            </a>.
+        </span>
+        <br />
+        <span>
+            Crafted with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>
+            · based on the <a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener">Stack</a> theme.
+        </span>
+    </section>
+</footer>
+

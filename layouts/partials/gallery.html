@@ -1,0 +1,47 @@
+{{- /*
+    Gallery partial for project pages.
+    Usage: {{ partial "gallery.html" (dict "Page" . "Items" .Params.gallery) }}
+*/ -}}
+{{- $page := .Page -}}
+{{- $items := .Items | default (slice) -}}
+{{- if gt (len $items) 0 -}}
+<div class="project-gallery">
+    <div class="project-gallery__grid">
+        {{- range $items }}
+            {{- $src := .src | default .Src -}}
+            {{- if $src }}
+                {{- $alt := .alt | default .Alt | default (.caption | default .Caption) | default "" -}}
+                {{- $title := .title | default .Title | default $alt -}}
+                {{- $caption := .caption | default .Caption -}}
+                {{- $rel := .rel | default .Rel -}}
+                {{- $class := .class | default .Class -}}
+                {{- $linked := true -}}
+                {{- with .Linked }}
+                    {{- $linked = . -}}
+                {{- end }}
+                {{- with .linked }}
+                    {{- $linked = . -}}
+                {{- end }}
+                <figure class="project-gallery__item">
+                    {{- partial "plugin/img.html" (dict
+                        "Src" $src
+                        "SrcSmall" (.src_small | default .SrcSmall)
+                        "SrcLarge" (.src_large | default .SrcLarge)
+                        "Alt" $alt
+                        "Title" $title
+                        "Caption" $caption
+                        "Class" (delimit (slice "project-gallery__image" $class | uniq) " " )
+                        "Rel" $rel
+                        "Resources" $page.Resources
+                        "Linked" $linked
+                    ) -}}
+                    {{- with $caption }}
+                        <figcaption class="project-gallery__caption">{{ . | safeHTML }}</figcaption>
+                    {{- end }}
+                </figure>
+            {{- end }}
+        {{- end }}
+    </div>
+</div>
+{{- end -}}
+

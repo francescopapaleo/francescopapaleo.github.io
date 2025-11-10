@@ -1,0 +1,159 @@
+{{- $url := .Get "url" -}}
+{{- if not $url -}}
+  {{- errorf "link-card shortcode requires a `url` parameter (e.g. url=\"https://example.com\")." -}}
+{{- end -}}
+{{- $title := .Get "title" | default ($url | strings.TrimPrefix "https://" | strings.TrimPrefix "http://" ) -}}
+{{- $description := .Get "description" | default "" -}}
+{{- $cta := .Get "cta" | default "Visit site →" -}}
+{{- $label := .Get "label" | default "External Link" -}}
+{{- $image := .Get "image" -}}
+{{- $imageAlt := .Get "image_alt" | default $title -}}
+{{- $imageClass := .Get "image_class" | default "" -}}
+{{- $scratchKey := "link-card-css-included" -}}
+{{- if not (.Page.Scratch.Get $scratchKey) -}}
+<style>
+.link-card {
+  border: 1px solid var(--card-border, rgba(148, 163, 184, 0.32));
+  background: var(--card-background, rgba(248, 250, 252, 0.9));
+  color: inherit;
+  padding: 1.75rem;
+  border-radius: 0.85rem;
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin: 2rem 0;
+  display: grid;
+  gap: 1.5rem;
+}
+.link-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
+}
+.link-card__preview {
+  position: relative;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: rgba(148, 163, 184, 0.2);
+}
+.link-card__preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.link-card__preview .lazyload {
+  min-height: 180px;
+}
+.link-card__header {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  margin-bottom: 1.1rem;
+}
+.link-card__icon {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, rgba(34, 211, 238, 0.95), rgba(59, 130, 246, 0.95));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.link-card__icon svg {
+  width: 24px;
+  height: 24px;
+  fill: #f8fafc;
+}
+.link-card__label {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(100, 116, 139, 0.85);
+  margin-bottom: 0.15rem;
+}
+.link-card__title {
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: inherit;
+  text-decoration: none;
+}
+.link-card__title:hover {
+  text-decoration: underline;
+}
+.link-card__description {
+  margin: 0 0 1.35rem 0;
+  color: rgba(71, 85, 105, 0.95);
+  line-height: 1.6;
+}
+.link-card__footer {
+  display: flex;
+  justify-content: flex-end;
+}
+.link-card__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1.1rem;
+  border-radius: 9999px;
+  background: linear-gradient(145deg, #1f2937, #0f172a);
+  color: #f8fafc;
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.link-card__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.25);
+}
+@media (prefers-color-scheme: dark) {
+  .link-card {
+    background: rgba(15, 23, 42, 0.8);
+    border-color: rgba(148, 163, 184, 0.35);
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.45);
+  }
+  .link-card__description {
+    color: rgba(226, 232, 240, 0.85);
+  }
+  .link-card__label {
+    color: rgba(148, 163, 184, 0.8);
+  }
+}
+</style>
+{{- .Page.Scratch.Set $scratchKey true -}}
+{{- end -}}
+<div class="link-card">
+  {{- with $image }}
+  <div class="link-card__preview">
+    {{- partial "plugin/img.html" (dict
+      "Src" .
+      "Alt" $imageAlt
+      "Title" $title
+      "Resources" $.Page.Resources
+      "Linked" false
+      "Class" (delimit (slice "link-card__preview-image" $imageClass | uniq) " ")
+    ) -}}
+  </div>
+  {{- end }}
+  <div class="link-card__header">
+    <div class="link-card__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" role="img">
+        <path d="M10.59 13.41a1 1 0 0 1 0-1.41l5-5a1 1 0 1 1 1.41 1.41l-5 5a1 1 0 0 1-1.41 0Zm-2.83 2.83a1 1 0 0 1-1.41 0 5 5 0 0 1 0-7.07l2.29-2.29a5 5 0 0 1 7.07 0 1 1 0 1 1-1.41 1.41 3 3 0 0 0-4.24 0l-2.3 2.3a3 3 0 0 0 0 4.24 1 1 0 0 1 0 1.41Zm7.07-1.41 2.3-2.3a3 3 0 0 0 0-4.24 1 1 0 0 1 1.41-1.41 5 5 0 0 1 0 7.07l-2.29 2.29a5 5 0 0 1-7.07 0 1 1 0 1 1 1.41-1.41 3 3 0 0 0 4.24 0Z"/>
+      </svg>
+    </div>
+    <div>
+      <div class="link-card__label">{{ $label }}</div>
+      <a class="link-card__title" href="{{ $url }}" target="_blank" rel="noopener">
+        {{ $title }}
+      </a>
+    </div>
+  </div>
+  {{- if $description }}
+  <p class="link-card__description">{{ $description }}</p>
+  {{- end }}
+  <div class="link-card__footer">
+    <a class="link-card__button" href="{{ $url }}" target="_blank" rel="noopener">
+      {{ $cta }}
+    </a>
+  </div>
+</div>
+

@@ -1,0 +1,163 @@
+baseURL = "https://francescopapaleo.github.io/"
+theme = "LoveIt"
+title = "Francesco Papaleo"
+
+languageCode = "en-us"
+languageName = "English"
+defaultContentLanguage = "en"
+hasCJKLanguage = false
+
+enableRobotsTXT = true
+enableEmoji = true
+enableGitInfo = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML", "MarkDown"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+
+[permalinks]
+  projects = "/projects/:slug/"
+  page = "/:slug/"
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Projects"
+    url = "/projects/"
+    weight = 1
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 2
+
+[params]
+  defaultTheme = "auto"
+  dateFormat = "2006-01-02"
+  title = "Francesco Papaleo"
+  description = "Sound designer and engineer working across music, immersive audio, and interactive art."
+  images = ["/assets/img/avatar.png"]
+
+  [params.author]
+    name = "Francesco Papaleo"
+    email = ""
+    link = "https://francescopapaleo.github.io"
+
+  [params.header]
+    desktopMode = "fixed"
+    mobileMode = "auto"
+    [params.header.title]
+      logo = ""
+      name = "Francesco Papaleo"
+      pre = ""
+      post = ""
+      typeit = false
+
+  [params.footer]
+    enable = true
+    custom = ""
+    hugo = true
+    copyright = true
+    author = true
+    since = 2020
+    license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>'
+
+  [params.search]
+    enable = true
+    type = "lunr"
+    contentLength = 4000
+    placeholder = "Search projects..."
+    maxResultLength = 15
+    snippetLength = 40
+    highlightTag = "mark"
+    absoluteURL = false
+
+  [params.home]
+    rss = 10
+    [params.home.profile]
+      enable = true
+      avatarURL = "/assets/img/avatar.webp"
+      title = "Francesco Papaleo"
+      subtitle = "Listen on the shoulders of giants"
+      typeit = false
+      social = true
+      disclaimer = ""
+    [params.home.posts]
+      enable = false
+
+  [params.social]
+    GitHub = "francescopapaleo"
+    Instagram = "francesco.papaleo.music"
+    Soundcloud = "francescopapaleo"
+    Linkedin = "francesco-papaleo"
+    RSS = true
+
+  [params.page]
+    hiddenFromHomePage = false
+    hiddenFromSearch = false
+    twemoji = false
+    lightgallery = true
+    ruby = false
+    fraction = false
+    fontawesome = true
+    linkToMarkdown = false
+    rssFullText = true
+    [params.page.toc]
+      enable = true
+      keepStatic = false
+      auto = true
+    [params.page.code]
+      copy = true
+      maxShownLines = 50
+    [params.page.math]
+      enable = false
+      copyTex = true
+      mhchem = true
+    [params.page.share]
+      enable = false
+    [params.page.comment]
+      enable = false
+
+  [params.library]
+    [params.library.js]
+      disableSearchAutoselect = "js/disable-search-autoselect.js"
+
+  [params.seo]
+    image = "/assets/img/avatar.png"
+    thumbnailUrl = "/assets/img/avatar.png"
+
+[pagination]
+  pagerSize = 10
+  path = "page"
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 6
+
+[outputFormats.MarkDown]
+  mediaType = "text/plain"
+  isPlainText = true
+  isHTML = false
+
+[mediaTypes."text/plain"]
+  suffixes = ["md"]
