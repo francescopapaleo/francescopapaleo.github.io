@@ -2,6 +2,7 @@
 title: Indigo
 description: Paris-based DJ collective, 2019–2020
 date: 2019-01-01
+area: collectives
 featuredimage: /assets/img/Indigo-logo.webp
 featuredimagepreview: /assets/img/Indigo-logo.webp
 categories:
