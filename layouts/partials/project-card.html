@@ -1,0 +1,32 @@
+{{- $thumb := .Params.thumbnail | default .Params.featuredimage | default .Params.featuredImage | default "" -}}
+<article class="project-card">
+    <a class="project-card__link" href="{{ .RelPermalink }}">
+        <div class="project-card__thumb">
+            {{- if $thumb -}}
+                {{- partial "plugin/img.html" (dict
+                    "Src" $thumb
+                    "Alt" (.Params.featuredimageAlt | default .Title)
+                    "Title" .Title
+                    "Class" "project-card__image"
+                    "Resources" .Resources
+                    "Linked" false
+                ) -}}
+            {{- else -}}
+                <div class="project-card__placeholder" aria-hidden="true">
+                    <span>{{ .Title }}</span>
+                </div>
+            {{- end -}}
+        </div>
+        <div class="project-card__body">
+            <h3 class="project-card__title">{{ .Title }}</h3>
+            <span class="project-card__date">{{ .Date.Format "2006" }}</span>
+            {{- with .Params.description -}}
+                <p class="project-card__description">{{ . }}</p>
+            {{- else -}}
+                {{- with .Summary -}}
+                    <p class="project-card__description">{{ . | plainify | truncate 120 }}</p>
+                {{- end -}}
+            {{- end -}}
+        </div>
+    </a>
+</article>

@@ -28,24 +28,49 @@ enableGitInfo = true
 [menu]
   [[menu.main]]
     identifier = "home"
-    name = "Projects"
-    url = "/projects/"
+    name = "Home"
+    url = "/"
     weight = 1
   [[menu.main]]
-    identifier = "statements"
-    name = "Statements"
-    url = "/statements/"
+    identifier = "music"
+    name = "Music"
+    url = "/music/"
     weight = 2
+  [[menu.main]]
+    identifier = "performance"
+    name = "Performance"
+    url = "/performance/"
+    weight = 3
+  [[menu.main]]
+    identifier = "research-tools"
+    name = "Research & Tools"
+    url = "/research-tools/"
+    weight = 4
+  [[menu.main]]
+    identifier = "engineering"
+    name = "Engineering"
+    url = "/engineering/"
+    weight = 5
+  [[menu.main]]
+    identifier = "installations"
+    name = "Installations"
+    url = "/installations/"
+    weight = 6
+  [[menu.main]]
+    identifier = "collectives"
+    name = "Collectives"
+    url = "/collectives/"
+    weight = 7
   [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about/"
-    weight = 3
+    weight = 8
   [[menu.main]]
     identifier = "contact"
     name = "Contact"
     url = "/contact/"
-    weight = 4
+    weight = 9
 
 [params]
   defaultTheme = "auto"

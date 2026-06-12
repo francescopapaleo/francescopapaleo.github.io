@@ -1,0 +1,31 @@
+{{- /* Returns the area slug a project belongs to. Single source of truth
+       for the category -> area mapping used by the area landing pages.
+       Precedence (first match wins): research > installation/theater >
+       engineering > dj > collective > creation.
+       Override per project with `area: <slug>` in front matter.
+       Valid slugs: research-tools, installations, engineering,
+       performance, collectives, music. */ -}}
+{{- $areas := slice
+    (dict "slug" "research-tools" "cats" (slice "research"))
+    (dict "slug" "installations"  "cats" (slice "installation" "theater"))
+    (dict "slug" "engineering"    "cats" (slice "engineering"))
+    (dict "slug" "performance"    "cats" (slice "dj"))
+    (dict "slug" "collectives"    "cats" (slice "collective"))
+    (dict "slug" "music"          "cats" (slice "creation"))
+-}}
+{{- $assigned := "" -}}
+{{- with .Params.area -}}
+    {{- $assigned = . -}}
+{{- end -}}
+{{- if not $assigned -}}
+    {{- $cats := .Params.categories | default slice -}}
+    {{- range $areas -}}
+        {{- if and (not $assigned) (intersect $cats .cats) -}}
+            {{- $assigned = .slug -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+{{- if not $assigned -}}
+    {{- warnf "project-area: %q matched no area (categories: %v)" .File.Path .Params.categories -}}
+{{- end -}}
+{{- return $assigned -}}

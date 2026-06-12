@@ -1,0 +1,32 @@
+{{- define "title" -}}
+    {{- .Title }} - {{ .Site.Title -}}
+{{- end -}}
+
+{{- define "content" -}}
+    <div class="page projects-archive">
+        <h1 class="projects-archive__title animate__animated animate__pulse animate__faster">
+            {{- .Title -}}
+        </h1>
+
+        {{- with .Content -}}
+            <div class="projects-archive__intro">
+                {{- . | safeHTML -}}
+            </div>
+        {{- end -}}
+
+        {{- $area := .Params.area -}}
+        {{- $mine := slice -}}
+        {{- range (where site.RegularPages "Section" "projects").ByDate.Reverse -}}
+            {{- if eq (partial "project-area.html" .) $area -}}
+                {{- $mine = $mine | append . -}}
+            {{- end -}}
+        {{- end -}}
+        {{- with $mine -}}
+            <div class="projects-grid">
+                {{- range . -}}
+                    {{- partial "project-card.html" . -}}
+                {{- end -}}
+            </div>
+        {{- end -}}
+    </div>
+{{- end -}}
