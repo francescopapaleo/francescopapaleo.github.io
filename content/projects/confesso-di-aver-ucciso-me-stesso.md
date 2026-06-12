@@ -21,7 +21,7 @@ tags:
 >
 > — Antonio Montanile
 
-**Confesso di aver ucciso me stesso — studio per un trio attraversando me** is a choreography by [Antonio Montanile](https://www.stratagemmi.it/quattro-domande-ad-antonio-montanile/), for which I created and performed the **electroacoustic music live**: microphones placed on stage and on Antonio's body captured the sounds of the performance, which I processed in real time with effects and manipulations of every sort in Ableton Live. Nothing was pre-recorded — everything happened on stage, as it unfolded.
+**Confesso di aver ucciso me stesso — studio per un trio attraversando me** is a choreography by **Antonio Montanile**, for which I created and performed the **electroacoustic music live**: microphones placed on stage and on Antonio's body captured the sounds of the performance, which I processed in real time with effects and manipulations of every sort in Ableton Live. Nothing was pre-recorded — everything happened on stage, as it unfolded.
 
 The piece was one of the eight finalist studies of the **Premio Equilibrio Roma 2010** for contemporary dance (third edition of the prize), hosted by the Auditorium Parco della Musica in Rome during the sixth edition of **Equilibrio — Festival della Nuova Danza**. Open to emerging artists working in Italy, the prize invited original projects destined to evolve into full dance productions; the finalists presented their studies to the public and an international jury, with the winner receiving a production grant and an invitation to the 2011 festival. We performed at the Teatro Studio on the 6th of February 2010.
 
