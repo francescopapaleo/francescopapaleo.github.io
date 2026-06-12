@@ -4,6 +4,9 @@
 {{- end -}}
 {{- $description := .Get "description" | default "" -}}
 {{- $cta := .Get "cta" | default "View on GitHub →" -}}
+{{- /* Optional `url` overrides the CTA button target (e.g. a project
+       website); the card title keeps linking to the GitHub repo. */ -}}
+{{- $url := .Get "url" | default (printf "https://github.com/%s" $repo) -}}
 {{- $title := .Get "title" | default (path.Base $repo) -}}
 {{- $label := .Get "label" | default "GitHub Repository" -}}
 {{- $scratchKey := "github-card-css-included" -}}
@@ -125,7 +128,7 @@
   <p class="repo-card__description">{{ $description }}</p>
   {{- end }}
   <div class="repo-card__footer">
-    <a class="repo-card__button" href="https://github.com/{{ $repo }}" target="_blank" rel="noopener">
+    <a class="repo-card__button" href="{{ $url }}" target="_blank" rel="noopener">
       {{ $cta }}
     </a>
   </div>

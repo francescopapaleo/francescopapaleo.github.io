@@ -25,6 +25,6 @@ The toolkit includes:
 - A Neutone-compatible VST/AU plugin with macro controls for modulation, color, and excitation modes.
 - Evaluation notebooks comparing the neural model with physically modelled and convolutional baselines.
 
-Explore the full toolkit, research notes, and downloadable plugin builds on GitHub.
+Explore the full toolkit, research notes, audio examples, and downloadable plugin builds on the [project website](https://francescopapaleo.net/neural-audio-spring-reverb/).
 
-{{< github-card repo="francescopapaleo/neural-audio-spring-reverb" description="AI-assisted spring reverb modeling project presented at DAFx 2024, including VST builds, training scripts, and evaluation notebooks." cta="Open repository" >}}
+{{< github-card repo="francescopapaleo/neural-audio-spring-reverb" description="AI-assisted spring reverb modeling project presented at DAFx 2024, including VST builds, training scripts, and evaluation notebooks." cta="Open the project website" url="https://francescopapaleo.net/neural-audio-spring-reverb/" >}}
