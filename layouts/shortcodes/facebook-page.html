@@ -1,0 +1,21 @@
+{{- /* Facebook Page plugin embed.
+     Usage: {{< facebook-page url="https://www.facebook.com/indigocollectif" tabs="events" title="Indigo on Facebook" height="600" >}}
+     tabs: comma-separated "timeline", "events", "messages". Page must be public. */ -}}
+{{- $url := .Get "url" -}}
+{{- $tabs := .Get "tabs" | default "timeline" -}}
+{{- $title := .Get "title" | default "Facebook page" -}}
+{{- $height := .Get "height" | default "600" -}}
+<div class="facebook-embed">
+    <iframe
+        width="500"
+        height="{{ $height }}"
+        scrolling="no"
+        frameborder="0"
+        loading="lazy"
+        allowfullscreen="true"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        title="{{ $title }}"
+        src="https://www.facebook.com/plugins/page.php?href={{ $url | urlquery }}&tabs={{ $tabs | urlquery }}&width=500&height={{ $height }}&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false">
+    </iframe>
+    <a href="{{ $url }}" target="_blank" rel="noopener noreferrer">{{ $title }}</a>
+</div>

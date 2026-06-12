@@ -17,3 +17,11 @@ tags:
 Indigo was a Paris-based DJ collective active between 2019 and 2020 — a trio I formed together with **Himal** and **Ebene**. We wove together Italo disco, deep techno, and Latin electronics, curating club nights focused on community care, inclusive dance floors, and unexpected sonic pairings.
 
 We experimented with long-form back-to-back sets and surround-style DJ rigs that blurred the line between performer and audience, activating independent venues, social centers, and rooftop spaces across the city. When the pandemic arrived in 2020, we stopped our activities.
+
+## Listen
+
+{{< soundcloud url="https://soundcloud.com/collectif-indigo" title="Collectif Indigo on SoundCloud" >}}
+
+## Past events
+
+{{< facebook-page url="https://www.facebook.com/indigocollectif" tabs="events" title="Indigo Collectif events on Facebook" >}}

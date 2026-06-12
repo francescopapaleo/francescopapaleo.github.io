@@ -1,0 +1,18 @@
+{{- /* SoundCloud embedded player for a track, playlist, or profile.
+     Usage: {{< soundcloud url="https://soundcloud.com/collectif-indigo" title="Collectif Indigo" height="450" >}} */ -}}
+{{- $url := .Get "url" -}}
+{{- $title := .Get "title" | default "SoundCloud player" -}}
+{{- $height := .Get "height" | default "450" -}}
+<div class="soundcloud-embed">
+    <iframe
+        width="100%"
+        height="{{ $height }}"
+        scrolling="no"
+        frameborder="no"
+        loading="lazy"
+        allow="autoplay"
+        title="{{ $title }}"
+        src="https://w.soundcloud.com/player/?url={{ $url | urlquery }}&color=%239a64ff&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false">
+    </iframe>
+    <a href="{{ $url }}" target="_blank" rel="noopener noreferrer">{{ $title }}</a>
+</div>
