@@ -15,5 +15,5 @@ I composed the original music for the campaign video, shaping a sonic journey th
 {{< instagram DP3Hfl2iN8O >}}
 
 **Credits**
-- Video: [@undervilla]()
-- Music: [@francesco.papaleo.music]()
+- Video: [@undervilla](https://www.instagram.com/undervilla/)
+- Music: [@francesco.papaleo.music](https://www.instagram.com/francesco.papaleo.music/)

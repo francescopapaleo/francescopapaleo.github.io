@@ -1,4 +1,4 @@
-baseURL = "https://francescopapaleo.github.io/"
+baseURL = "https://francescopapaleo.net/"
 theme = "LoveIt"
 title = "Francesco Papaleo"
 
@@ -43,7 +43,7 @@ enableGitInfo = true
   [params.author]
     name = "Francesco Papaleo"
     email = ""
-    link = "https://francescopapaleo.github.io"
+    link = "https://francescopapaleo.net"
 
   [params.header]
     desktopMode = "fixed"
