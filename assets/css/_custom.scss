@@ -135,6 +135,30 @@
   display: none;
 }
 
+// With nine menu entries the desktop menu needs ~970px; the theme only
+// switches to the hamburger header below 680px, leaving a range where
+// items overflow. Switch earlier.
+@media only screen and (max-width: 1024px) {
+  #header-desktop {
+    display: none;
+  }
+
+  #header-mobile {
+    display: block;
+  }
+
+  body.blur {
+    overflow: hidden;
+  }
+}
+
+// Center the desktop menu now that the header title is hidden
+// (the theme lays it out as space-between against the title).
+#header-desktop .header-wrapper {
+  justify-content: center;
+  padding: 0 2rem;
+}
+
 // The theme right-aligns titles on "special" pages (About, Contact, ...).
 .special .single-title,
 .special .single-subtitle {
