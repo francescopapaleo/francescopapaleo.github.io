@@ -1,0 +1,4 @@
+{{- /* GoatCounter Analytics — production only, no cookies, GDPR-compliant */ -}}
+{{- if and (eq hugo.Environment "production") .Site.Params.goatcounter.enable -}}
+    <script data-goatcounter="https://{{ .Site.Params.goatcounter.code }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+{{- end -}}
