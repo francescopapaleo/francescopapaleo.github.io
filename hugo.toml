@@ -121,7 +121,7 @@ enableGitInfo = true
       title = "Francesco Papaleo"
       subtitle = "Listen on the shoulders of giants"
       typeit = false
-      social = true
+      social = false
       disclaimer = ""
     [params.home.posts]
       enable = false
