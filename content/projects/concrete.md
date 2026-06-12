@@ -7,6 +7,10 @@ featuredimagepreview: /assets/img/concrete.webp
 categories:
   - creation
   - collective
+tags:
+  - electroacoustic
+  - acousmatic
+  - bologna
 ---
 
 Concrete Bologna Elettroacustica is an electro-acoustic and acousmatic collective born in Bologna in 2010.

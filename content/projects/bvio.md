@@ -6,6 +6,10 @@ featuredimage: /assets/img/bvio.webp
 featuredimagepreview: /assets/img/bvio.webp
 categories:
   - installation
+tags:
+  - dj-set
+  - installation
+  - bologna
 ---
 
 #### _Abbiamo finito i buoni sentimenti_

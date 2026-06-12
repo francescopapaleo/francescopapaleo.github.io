@@ -21,6 +21,10 @@ enableGitInfo = true
   projects = "/projects/:slug/"
   page = "/:slug/"
 
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
 [menu]
   [[menu.main]]
     identifier = "home"
@@ -28,10 +32,20 @@ enableGitInfo = true
     url = "/projects/"
     weight = 1
   [[menu.main]]
+    identifier = "statements"
+    name = "Statements"
+    url = "/statements/"
+    weight = 2
+  [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about/"
-    weight = 2
+    weight = 3
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 4
 
 [params]
   defaultTheme = "auto"

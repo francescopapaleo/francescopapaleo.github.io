@@ -6,6 +6,10 @@ featuredimage: /assets/img/otls.webp
 featuredimagepreview: /assets/img/otls.webp
 categories:
   - creation
+tags:
+  - music-production
+  - band
+  - live-performance
 ---
 
 oh!theladystone is an indietronica band that fuses analog synths, guitars, and glitchy beats into intimate, cinematic songs. I co-wrote and produced the record, shaping a live setup that lets us resample vocals and guitars in real time while projecting reactive visuals.

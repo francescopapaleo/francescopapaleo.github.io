@@ -6,6 +6,10 @@ featuredimage: /assets/img/CHEAP-Call-For-Artists-2025_TRUST-UTOPIA-ph-Margherit
 featuredimagepreview: /assets/img/CHEAP-Call-For-Artists-2025_TRUST-UTOPIA-ph-Margherita-Caprilli-16-1030x687.webp
 categories:
   - creation
+tags:
+  - composition
+  - street-art
+  - bologna
 ---
 
 CHEAP’s international open call brought together 601 artists, 952 submissions, and 209 posters installed throughout Bologna.

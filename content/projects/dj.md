@@ -6,6 +6,9 @@ featuredimage: /assets/img/DSCF3448-atelieroz.webp
 featuredimagepreview: /assets/img/DSCF3448-atelieroz.webp
 categories:
   - dj
+tags:
+  - dj-set
+  - club-culture
 ---
 
 {{< image

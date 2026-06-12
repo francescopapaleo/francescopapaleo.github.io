@@ -26,6 +26,22 @@
             {{- partial "gallery.html" (dict "Page" $page "Items" .) -}}
         {{- end -}}
 
+        {{- /* Categories & Tags */ -}}
+        {{- if or .Params.categories .Params.tags -}}
+            <div class="project-meta">
+                {{- range .Params.categories -}}
+                    <a class="project-meta__item" href="{{ printf "/categories/%v/" (. | urlize) | relURL }}">
+                        <i class="far fa-folder fa-fw" aria-hidden="true"></i>{{ . }}
+                    </a>
+                {{- end -}}
+                {{- range .Params.tags -}}
+                    <a class="project-meta__item" href="{{ printf "/tags/%v/" (. | urlize) | relURL }}">
+                        <i class="fas fa-tag fa-fw" aria-hidden="true"></i>{{ . }}
+                    </a>
+                {{- end -}}
+            </div>
+        {{- end -}}
+
         {{- /* Comment */ -}}
         {{- partial "comment.html" . -}}
     </div>

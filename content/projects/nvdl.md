@@ -7,6 +7,10 @@ featuredimagepreview: /assets/img/nvdl.webp
 categories:
   - creation
   - theater
+tags:
+  - sound-design
+  - composition
+  - theatre
 gallery:
   - src: /assets/img/frame603011.webp
     alt: Frame from Non Vengo dalla Luna performance

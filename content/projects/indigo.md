@@ -7,6 +7,10 @@ featuredimagepreview: /assets/img/Indigo-logo.webp
 categories:
   - dj
   - collective
+tags:
+  - dj-set
+  - club-culture
+  - barcelona
 ---
 
 Indigo is a Barcelona-based DJ collective weaving together Italo disco, deep techno, and Latin electronics. We curate club nights focused on community care, inclusive dance floors, and unexpected sonic pairings.

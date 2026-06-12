@@ -6,6 +6,10 @@ featuredimage: /assets/img/fuck_war.webp
 featuredimagepreview: /assets/img/fuck_war.webp
 categories:
   - creation
+tags:
+  - composition
+  - street-art
+  - bologna
 ---
 
 Music for CHEAP’s 2024 call for artists: a manifesto against war that took over the streets of Bologna through large-scale poster interventions.

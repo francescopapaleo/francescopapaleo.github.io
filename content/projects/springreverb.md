@@ -6,6 +6,10 @@ featuredimage: /assets/img/neutone-square.webp
 featuredimagepreview: /assets/img/neutone-square.webp
 categories:
   - research
+tags:
+  - machine-learning
+  - dsp
+  - audio-plugin
 ---
 Neural Audio Spring Reverb is a differentiable model of analog springs designed for the Neutone plugin platform and presented at DAFx 2024. The project combines circuit-inspired DSP with deep learning to capture the chaotic behaviour of hardware tanks while remaining lightweight enough for real-time performance.
 

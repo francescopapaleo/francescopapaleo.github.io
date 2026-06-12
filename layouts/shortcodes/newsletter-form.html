@@ -1,0 +1,45 @@
+{{- /* Native newsletter signup form posting to a Brevo (sibforms) hosted form URL.
+     Usage: {{< newsletter-form url="https://....sibforms.com/serve/..." >}}
+     Fields mirror the hosted form: EMAIL, FIRSTNAME, OPT_IN, email_address_check (honeypot). */ -}}
+{{- $url := .Get "url" -}}
+{{- $id := printf "newsletter-%d" .Ordinal -}}
+<form class="newsletter-form" id="{{ $id }}" method="POST" action="{{ $url }}">
+    <div class="newsletter-form__row">
+        <input class="newsletter-form__input" type="text" name="FIRSTNAME" placeholder="First name (optional)" autocomplete="given-name">
+        <input class="newsletter-form__input" type="email" name="EMAIL" placeholder="Email address" required autocomplete="email">
+    </div>
+    <label class="newsletter-form__consent">
+        <input type="checkbox" name="OPT_IN" value="1" required>
+        <span>I agree to receive occasional news by email. Unsubscribe anytime.</span>
+    </label>
+    <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;">
+    <input type="hidden" name="locale" value="en">
+    <button class="newsletter-form__submit" type="submit">Subscribe</button>
+    <p class="newsletter-form__message" role="status" aria-live="polite"></p>
+</form>
+<script>
+(function () {
+    var form = document.getElementById('{{ $id }}');
+    var message = form.querySelector('.newsletter-form__message');
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        var button = form.querySelector('.newsletter-form__submit');
+        button.disabled = true;
+        fetch(form.action + '?isAjax=1', {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+        }).then(function (response) {
+            if (!response.ok) throw new Error();
+            message.textContent = 'Thank you — check your inbox to confirm your subscription.';
+            message.classList.add('newsletter-form__message--success');
+            form.reset();
+        }).catch(function () {
+            message.textContent = 'Something went wrong — please try again later.';
+            message.classList.add('newsletter-form__message--error');
+        }).finally(function () {
+            button.disabled = false;
+        });
+    });
+})();
+</script>
