@@ -27,22 +27,6 @@ For collaborations, bookings, or just to talk about sound — reach out through 
   </a>
 </div>
 
-## Listen
-
-{{< bandcamp type="track" id="4019360472"
-    title="Mantix — Hanss (Francesco Papaleo Remix)"
-    url="https://francescopapaleo.bandcamp.com/track/mantix-hanss-francesco-papaleo-remix-2" >}}
-
-{{< bandcamp type="track" id="2758147700"
-    title="Ain't No Sunshine"
-    url="https://francescopapaleo.bandcamp.com/track/aint-no-sunshine" >}}
-
-{{< bandcamp type="album" id="2293359631"
-    title="The Maze"
-    url="https://francescopapaleo.bandcamp.com/album/the-maze" >}}
-
-Also streaming everywhere: [Ain't No Sunshine on your platform of choice](https://ffm.to/aintnosun).
-
 ## Newsletter
 
 Occasional news on releases, performances, and projects:
