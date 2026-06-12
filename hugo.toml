@@ -89,7 +89,7 @@ enableGitInfo = true
     mobileMode = "auto"
     [params.header.title]
       logo = ""
-      name = "Francesco Papaleo"
+      name = ""
       pre = ""
       post = ""
       typeit = false

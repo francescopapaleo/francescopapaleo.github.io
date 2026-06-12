@@ -37,22 +37,14 @@
   line-height: 1.6;
 }
 
-.projects-year {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.projects-year__heading {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin: 0;
-}
-
 .projects-grid {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  // Columns flex between 240-320px so covers never balloon at in-between
+  // viewport widths; min(100%, 240px) keeps a single column from
+  // overflowing on screens narrower than 240px + padding.
+  grid-template-columns: repeat(auto-fill, minmax(#{"min(100%, 240px)"}, 320px));
+  justify-content: center;
 }
 
 .project-card {
@@ -123,11 +115,30 @@
   margin: 0;
 }
 
+.project-card__date {
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  opacity: 0.55;
+}
+
 .project-card__description {
   margin: 0;
   font-size: 0.95rem;
   line-height: 1.6;
   opacity: 0.8;
+}
+
+// Hide the site title in the header (desktop + mobile); navigation happens
+// via the Home menu entry. The theme would otherwise render an empty link.
+.header-title {
+  display: none;
+}
+
+// The theme right-aligns titles on "special" pages (About, Contact, ...).
+.special .single-title,
+.special .single-subtitle {
+  text-align: left;
 }
 
 .contact-links {
