@@ -2,7 +2,7 @@
 title: Touring & Live Sound
 description: Two decades of live sound engineering on tour with international artists
 date: 2022-08-01
-draft: true
+draft: false
 categories:
   - engineering
 tags:

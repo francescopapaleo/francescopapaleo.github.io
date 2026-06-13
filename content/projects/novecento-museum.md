@@ -2,7 +2,7 @@
 title: Novecento Museum — Interactive Sound
 description: Interactive devices and sound content for the Novecento Museum in Florence, with Tempo Reale
 date: 2012-06-01
-draft: true
+draft: false
 categories:
   - installation
 tags:

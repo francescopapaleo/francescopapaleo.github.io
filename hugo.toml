@@ -42,15 +42,10 @@ enableGitInfo = true
     url = "/performance/"
     weight = 3
   [[menu.main]]
-    identifier = "research-tools"
-    name = "Research & Tools"
-    url = "/research-tools/"
-    weight = 4
-  [[menu.main]]
     identifier = "engineering"
     name = "Engineering"
     url = "/engineering/"
-    weight = 5
+    weight = 4
   [[menu.main]]
     identifier = "installations"
     name = "Installations"

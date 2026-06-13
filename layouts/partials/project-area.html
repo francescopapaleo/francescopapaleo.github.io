@@ -1,14 +1,12 @@
 {{- /* Returns the area slug a project belongs to. Single source of truth
        for the category -> area mapping used by the area landing pages.
-       Precedence (first match wins): research > installation/theater >
-       engineering > dj > collective > creation.
+       Precedence (first match wins): research/engineering > installation/theater >
+       dj > collective > creation.
        Override per project with `area: <slug>` in front matter.
-       Valid slugs: research-tools, installations, engineering,
-       performance, collectives, music. */ -}}
+       Valid slugs: engineering, installations, performance, collectives, music. */ -}}
 {{- $areas := slice
-    (dict "slug" "research-tools" "cats" (slice "research"))
+    (dict "slug" "engineering"    "cats" (slice "research" "engineering"))
     (dict "slug" "installations"  "cats" (slice "installation" "theater"))
-    (dict "slug" "engineering"    "cats" (slice "engineering"))
     (dict "slug" "performance"    "cats" (slice "dj"))
     (dict "slug" "collectives"    "cats" (slice "collective"))
     (dict "slug" "music"          "cats" (slice "creation"))

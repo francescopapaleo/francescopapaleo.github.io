@@ -2,7 +2,7 @@
 title: teamLab — Interactive Systems
 description: Interactive systems design for teamLab's immersive digital art installations
 date: 2017-01-01
-draft: true
+draft: false
 categories:
   - installation
 tags:

@@ -2,7 +2,8 @@
 title: roBOt Festival
 description: Technical management for the electronic music and digital arts festival in Bologna
 date: 2012-09-01
-draft: true
+draft: false
+area: installations
 categories:
   - engineering
 tags:

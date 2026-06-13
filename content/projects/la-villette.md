@@ -2,7 +2,8 @@
 title: La Villette
 description: Sound engineering at the Grande Halle de la Villette in Paris
 date: 2019-11-01
-draft: true
+draft: false
+area: installations
 categories:
   - engineering
 tags:

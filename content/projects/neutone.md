@@ -2,7 +2,7 @@
 title: Neutone — AI Audio Research
 description: AI research internship on neural audio at Neutone, Tokyo
 date: 2023-10-01
-draft: true
+draft: false
 categories:
   - research
 tags:

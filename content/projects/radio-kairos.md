@@ -2,7 +2,7 @@
 title: Radio Kairos 105.85 FM
 description: System design for a community radio station in Bologna
 date: 2007-01-01
-draft: true
+draft: false
 categories:
   - engineering
 tags:

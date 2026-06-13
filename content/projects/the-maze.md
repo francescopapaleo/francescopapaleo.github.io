@@ -12,7 +12,7 @@ tags:
   - electronic-music
 ---
 
-**The Maze** is the debut album of [oh!theladystone]({{< ref "/projects/otls" >}}), released on the 1st of May 2016. I co-wrote and produced the record.
+**The Maze** is the second album of oh!theladystone, released on the 1st of May 2016. I co-wrote and produced the record.
 
 {{< bandcamp type="album" id="2293359631"
     title="The Maze"
@@ -32,3 +32,5 @@ tags:
 **Credits:** Alberto Poloni, Francesco Papaleo, Irene Elena, Petra Dotti, Vincenzo Scorza
 
 Released under Creative Commons BY-NC-SA 4.0.
+
+
