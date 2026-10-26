@@ -367,3 +367,41 @@
   border: 0;
 }
 
+
+.newsletter-issues {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 720px;
+}
+
+.newsletter-issue {
+  padding: 1.25rem 0;
+  border-top: 1px solid rgba(128, 128, 128, 0.25);
+}
+
+.newsletter-issue__date {
+  display: block;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.newsletter-issue__title {
+  display: inline-block;
+  margin-top: 0.25rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.newsletter-issue__description {
+  margin: 0.4rem 0 0;
+  opacity: 0.8;
+}
+
+// Covers and photos in newsletter issues share one width, centered.
+.newsletter-image {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  margin: 1.5rem auto;
+}

@@ -29,7 +29,7 @@ For collaborations, bookings, or just to talk about sound — reach out through 
 
 ## Newsletter
 
-Occasional news on releases, performances, and projects:
+Occasional news on releases, performances, and projects ([read past issues](/newsletter/)):
 
 {{< newsletter-form url="https://0658613e.sibforms.com/serve/MUIFAEAMMPERRRQhYzMoOMhkwQyHbIdCV42wtTBB7dbERJN1D5NDopgWsFhTHxndbx4SZJ8ErfaWtDs6A-DmvBmqk_74G4pAyAX1Mjpwj3dw8Z1O4tWM91Lx4kewlBon29kajSgMupJX_iem59Vphx1XSvB4cdchb446JaDGGJkXV1uzyVDG9EcJ1zSD9_EpPGYFjtPSFTuSQjI71A==" >}}
 

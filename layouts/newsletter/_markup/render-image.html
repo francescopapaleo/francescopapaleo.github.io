@@ -1,0 +1,3 @@
+{{- /* Newsletter images: fixed width and centered (see .newsletter-image),
+     with the Markdown alt text kept as alt (the theme hook uses the path). */ -}}
+<img class="newsletter-image" src="{{ .Destination | safeURL }}" alt="{{ .Text }}" loading="lazy">

@@ -62,10 +62,15 @@ enableGitInfo = true
     url = "/about/"
     weight = 8
   [[menu.main]]
+    identifier = "newsletter"
+    name = "Newsletter"
+    url = "/newsletter/"
+    weight = 9
+  [[menu.main]]
     identifier = "contact"
     name = "Contact"
     url = "/contact/"
-    weight = 9
+    weight = 10
 
 [params]
   defaultTheme = "auto"
