@@ -1,45 +1,36 @@
-{{- /* Native newsletter signup form posting to a Brevo (sibforms) hosted form URL.
-     Usage: {{< newsletter-form url="https://....sibforms.com/serve/..." >}}
-     Fields mirror the hosted form: EMAIL, FIRSTNAME, OPT_IN, email_address_check (honeypot). */ -}}
-{{- $url := .Get "url" -}}
-{{- $id := printf "newsletter-%d" .Ordinal -}}
-<form class="newsletter-form" id="{{ $id }}" method="POST" action="{{ $url }}">
-    <div class="newsletter-form__row">
-        <input class="newsletter-form__input" type="text" name="FIRSTNAME" placeholder="First name (optional)" autocomplete="given-name">
-        <input class="newsletter-form__input" type="email" name="EMAIL" placeholder="Email address" required autocomplete="email">
+{{- /* Newsletter signup form posting to an Infomaniak Newsletter webform.
+     Usage: {{< newsletter-form >}}  (optional overrides: id="<webform id>" key="<webform key>")
+     Markup is Infomaniak's embed code restyled: webform_index.js relies on the inf-* classes
+     (form.inf-form, .inf-content, div.inf-input > input[data-inf-meta], .inf-submit input,
+     .inf-success, .inf-rgpd), so keep them. Altcha provides the captcha. */ -}}
+{{- $id := .Get "id" | default "26733" -}}
+{{- $key := .Get "key" | default "eyJpdiI6IjVpMndtekVaWVJTYzFxTnYrcW5ncXNSMnhlbkRYelZQSEh6TjYrN2pKcVE9IiwibWFjIjoiMzcyZjY1NGIzZTc1ZmUzYmNhZDI4NGJlYzRkZTc0MmUyOGEwOTQ2MzY5YTQ1OTI4ZjVmYjQxYzRjMTZjZTRjZiIsInZhbHVlIjoiTXNzWXV5TlZDKzNycEFzSzVSczVjMk5VZXV6Q0pSSWZ6d09CcDdQaFo4UT0ifQ==" -}}
+<form class="newsletter-form inf-form" method="post" action="https://newsletter.infomaniak.com/v3/api/1/newsletters/webforms/{{ $id }}/submit">
+    <input type="text" name="inf_email_check" autocomplete="off" tabindex="-1" aria-hidden="true" style="display:none">
+    <input type="text" name="website" autocomplete="off" tabindex="-1" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">
+    <input type="hidden" name="key" value="{{ $key }}">
+    <input type="hidden" name="webform_id" value="{{ $id }}">
+    <div class="inf-main">
+        <div class="inf-success newsletter-form__success" style="display:none" role="status">
+            Thank you — a confirmation email is on its way. Please check your inbox to confirm your subscription.
+        </div>
+        <div class="inf-content">
+            <div class="newsletter-form__row">
+                <div class="inf-input inf-input-text">
+                    <input class="newsletter-form__input" type="text" name="inf[2]" data-inf-meta="2" data-inf-error="" placeholder="First name (optional)" autocomplete="given-name" aria-label="First name">
+                </div>
+                <div class="inf-input inf-input-text">
+                    <input class="newsletter-form__input" type="email" name="inf[1]" data-inf-meta="1" data-inf-error="" required placeholder="Email address" autocomplete="email" aria-label="Email address">
+                </div>
+            </div>
+            <div class="inf-rgpd newsletter-form__rgpd">Your email address is only used to send you the newsletter and news about my activities. You can unsubscribe at any time using the link included in each email.</div>
+            <altcha-widget hidelogo hidefooter floating challengeurl="https://newsletter.infomaniak.com/v3/altcha-challenge"></altcha-widget>
+            <div class="inf-submit">
+                <input class="newsletter-form__submit" type="submit" value="Subscribe">
+            </div>
+        </div>
     </div>
-    <label class="newsletter-form__consent">
-        <input type="checkbox" name="OPT_IN" value="1" required>
-        <span>I agree to receive occasional news by email. Unsubscribe anytime.</span>
-    </label>
-    <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;">
-    <input type="hidden" name="locale" value="en">
-    <button class="newsletter-form__submit" type="submit">Subscribe</button>
-    <p class="newsletter-form__message" role="status" aria-live="polite"></p>
 </form>
-<script>
-(function () {
-    var form = document.getElementById('{{ $id }}');
-    var message = form.querySelector('.newsletter-form__message');
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
-        var button = form.querySelector('.newsletter-form__submit');
-        button.disabled = true;
-        fetch(form.action + '?isAjax=1', {
-            method: 'POST',
-            body: new FormData(form),
-            headers: { 'Accept': 'application/json' }
-        }).then(function (response) {
-            if (!response.ok) throw new Error();
-            message.textContent = 'Thank you — check your inbox to confirm your subscription.';
-            message.classList.add('newsletter-form__message--success');
-            form.reset();
-        }).catch(function () {
-            message.textContent = 'Something went wrong — please try again later.';
-            message.classList.add('newsletter-form__message--error');
-        }).finally(function () {
-            button.disabled = false;
-        });
-    });
-})();
-</script>
+<script src="https://newsletter.infomaniak.com/v3/static/mcaptcha/altcha.min.js?v=1793311200" type="module"></script>
+<script src="https://newsletter.infomaniak.com/v3/static/mcaptcha/altcha-index.js?v=1793311200" defer></script>
+<script src="https://newsletter.infomaniak.com/v3/static/webform_index.js?v=1793311200"></script>

@@ -266,8 +266,13 @@
   margin-bottom: 0.75rem;
 }
 
-.newsletter-form__input {
+.newsletter-form__row > .inf-input {
   flex: 1 1 200px;
+}
+
+.newsletter-form__input {
+  box-sizing: border-box;
+  width: 100%;
   padding: 0.75rem 1rem;
   border: 1px solid rgba(128, 128, 128, 0.35);
   border-radius: 0.75rem;
@@ -279,20 +284,6 @@
 .newsletter-form__input:focus {
   outline: none;
   border-color: rgba(128, 128, 128, 0.7);
-}
-
-.newsletter-form__consent {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-  opacity: 0.85;
-  cursor: pointer;
-}
-
-.newsletter-form__consent input {
-  margin-top: 0.25rem;
 }
 
 .newsletter-form__submit {
@@ -319,17 +310,30 @@
   cursor: wait;
 }
 
-.newsletter-form__message {
+.newsletter-form__rgpd {
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+.newsletter-form .inf-submit {
   margin-top: 0.75rem;
-  font-size: 0.95rem;
 }
 
-.newsletter-form__message--success {
-  color: #2e9e5b;
+.newsletter-form .inf-error .newsletter-form__input {
+  border-color: #d05050;
 }
 
-.newsletter-form__message--error {
+.newsletter-form .inf-message {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
   color: #d05050;
+}
+
+.newsletter-form__success {
+  padding: 1rem 0;
+  color: #2e9e5b;
 }
 
 .instagram-embed {
