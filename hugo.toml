@@ -2,7 +2,7 @@ baseURL = "https://francescopapaleo.net/"
 theme = "LoveIt"
 title = "Francesco Papaleo"
 
-languageCode = "en-us"
+locale = "en-us"
 languageName = "English"
 defaultContentLanguage = "en"
 hasCJKLanguage = false
