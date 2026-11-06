@@ -7,10 +7,11 @@ _Humble Serviteur du Bruit_
 
 For collaborations, bookings, or just to talk about sound — reach out through any of these channels:
 
-<ul class="links">
+<ul class="links links--social">
   <li><a href="https://github.com/francescopapaleo" rel="noopener">GitHub</a></li>
   <li><a href="https://www.instagram.com/francesco.papaleo.music/" rel="noopener">Instagram</a></li>
   <li><a href="https://soundcloud.com/francescopapaleo" rel="noopener">SoundCloud</a></li>
+  <li><a href="https://www.youtube.com/@francescopapaleo" rel="noopener">YouTube</a></li>
   <li><a href="https://francescopapaleo.bandcamp.com/" rel="noopener">Bandcamp</a></li>
   <li><a href="https://www.linkedin.com/in/francesco-papaleo/" rel="noopener">LinkedIn</a></li>
 </ul>

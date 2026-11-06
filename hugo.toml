@@ -55,6 +55,9 @@ enableGitInfo = true
     name = "SoundCloud"
     url = "https://soundcloud.com/francescopapaleo"
   [[params.links]]
+    name = "YouTube"
+    url = "https://www.youtube.com/@francescopapaleo"
+  [[params.links]]
     name = "Bandcamp"
     url = "https://francescopapaleo.bandcamp.com/"
   [[params.links]]
