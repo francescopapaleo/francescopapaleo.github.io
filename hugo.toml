@@ -43,7 +43,7 @@ enableGitInfo = true
 [params]
   description = "Sound designer and engineer working across music, immersive audio, and interactive art."
   subtitle = "Listen on the shoulders of giants"
-  disciplines = "Sound design · Engineering · Music · Immersive audio"
+  disciplines = "Music · Sound design · Engineering · Immersive audio"
   image = "/assets/img/avatar.png"
   since = 2020
 
