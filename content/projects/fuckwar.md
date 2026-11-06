@@ -12,12 +12,6 @@ tags:
 
 Music for CHEAP’s 2024 call for artists: a manifesto against war that took over the streets of Bologna through large-scale poster interventions.
 
-{{< image
-    src="/assets/img/fuck_war.webp"
-    alt="Fuck War poster for CHEAP 2024 call for artists"
-    caption="CHEAP Street Poster Art — Call for Artists 2024."
->}}
-
 Project reach:
 
 - 662 participating artists
