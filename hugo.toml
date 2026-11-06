@@ -1,187 +1,74 @@
 baseURL = "https://francescopapaleo.net/"
-theme = "LoveIt"
 title = "Francesco Papaleo"
 
 locale = "en-us"
-languageName = "English"
 defaultContentLanguage = "en"
-hasCJKLanguage = false
 
 enableRobotsTXT = true
 enableEmoji = true
 enableGitInfo = true
 
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
-  page = ["HTML", "MarkDown"]
+  home = ["HTML", "RSS"]
   section = ["HTML", "RSS"]
-  taxonomy = ["HTML", "RSS"]
+  taxonomy = ["HTML"]
+  term = ["HTML"]
 
 [permalinks]
   projects = "/projects/:slug/"
   page = "/:slug/"
 
 [taxonomies]
-  category = "categories"
   tag = "tags"
 
+# Work, About and Contact are sections of the homepage; Newsletter is its own section.
 [menu]
   [[menu.main]]
-    identifier = "home"
-    name = "Home"
-    url = "/"
+    name = "Work"
+    url = "/#work"
     weight = 1
   [[menu.main]]
-    identifier = "music"
-    name = "Music"
-    url = "/music/"
+    name = "About"
+    url = "/#about"
     weight = 2
   [[menu.main]]
-    identifier = "performance"
-    name = "Performance"
-    url = "/performance/"
-    weight = 3
-  [[menu.main]]
-    identifier = "engineering"
-    name = "Engineering"
-    url = "/engineering/"
-    weight = 4
-  [[menu.main]]
-    identifier = "installations"
-    name = "Installations"
-    url = "/installations/"
-    weight = 6
-  [[menu.main]]
-    identifier = "collectives"
-    name = "Collectives"
-    url = "/collectives/"
-    weight = 7
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
-    weight = 8
-  [[menu.main]]
-    identifier = "newsletter"
     name = "Newsletter"
     url = "/newsletter/"
-    weight = 9
+    weight = 3
   [[menu.main]]
-    identifier = "contact"
     name = "Contact"
-    url = "/contact/"
-    weight = 10
+    url = "/#contact"
+    weight = 4
 
 [params]
-  defaultTheme = "auto"
-  dateFormat = "2006-01-02"
-  title = "Francesco Papaleo"
   description = "Sound designer and engineer working across music, immersive audio, and interactive art."
-  images = ["/assets/img/avatar.png"]
+  subtitle = "Listen on the shoulders of giants"
+  disciplines = "Sound design · Engineering · Music · Immersive audio"
+  image = "/assets/img/avatar.png"
+  since = 2020
 
-  [params.author]
-    name = "Francesco Papaleo"
-    email = ""
-    link = "https://francescopapaleo.net"
-
-  [params.header]
-    desktopMode = "fixed"
-    mobileMode = "auto"
-    [params.header.title]
-      logo = ""
-      name = ""
-      pre = ""
-      post = ""
-      typeit = false
-
-  [params.footer]
-    enable = true
-    custom = ""
-    hugo = true
-    copyright = true
-    author = true
-    since = 2020
-    license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>'
-
-  [params.search]
-    enable = true
-    type = "lunr"
-    contentLength = 4000
-    placeholder = "Search projects..."
-    maxResultLength = 15
-    snippetLength = 40
-    highlightTag = "mark"
-    absoluteURL = false
-
-  [params.home]
-    rss = 10
-    [params.home.profile]
-      enable = true
-      avatarURL = "/assets/img/avatar.webp"
-      title = "Francesco Papaleo"
-      subtitle = "Listen on the shoulders of giants"
-      typeit = false
-      social = false
-      disclaimer = ""
-    [params.home.posts]
-      enable = false
-
-  [params.social]
-    GitHub = "francescopapaleo"
-    Instagram = "francesco.papaleo.music"
-    Soundcloud = "francescopapaleo"
-    Linkedin = "francesco-papaleo"
-    RSS = true
-
-  [params.page]
-    hiddenFromHomePage = false
-    hiddenFromSearch = false
-    twemoji = false
-    lightgallery = true
-    ruby = false
-    fraction = false
-    fontawesome = true
-    linkToMarkdown = false
-    rssFullText = true
-    [params.page.toc]
-      enable = true
-      keepStatic = false
-      auto = true
-    [params.page.code]
-      copy = true
-      maxShownLines = 50
-    [params.page.math]
-      enable = false
-      copyTex = true
-      mhchem = true
-    [params.page.share]
-      enable = false
-    [params.page.comment]
-      enable = false
-
-  [params.library]
-    [params.library.js]
-      disableSearchAutoselect = "js/disable-search-autoselect.js"
-
-  [params.seo]
-    image = "/assets/img/avatar.png"
-    thumbnailUrl = "/assets/img/avatar.png"
+  # Contact links, in display order (homepage Contact section and /contact/).
+  [[params.links]]
+    name = "Instagram"
+    url = "https://www.instagram.com/francesco.papaleo.music/"
+  [[params.links]]
+    name = "SoundCloud"
+    url = "https://soundcloud.com/francescopapaleo"
+  [[params.links]]
+    name = "Bandcamp"
+    url = "https://francescopapaleo.bandcamp.com/"
+  [[params.links]]
+    name = "GitHub"
+    url = "https://github.com/francescopapaleo"
+  [[params.links]]
+    name = "LinkedIn"
+    url = "https://www.linkedin.com/in/francesco-papaleo/"
 
   [params.goatcounter]
     enable = true
     code = "francescopapaleo"
 
-[pagination]
-  pagerSize = 10
-  path = "page"
-
 [markup]
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = true
-    lineNos = true
-    lineNumbersInTable = true
-    noClasses = false
   [markup.goldmark]
     [markup.goldmark.extensions]
       definitionList = true
@@ -193,14 +80,6 @@ enableGitInfo = true
       typographer = true
     [markup.goldmark.renderer]
       unsafe = true
-  [markup.tableOfContents]
-    startLevel = 2
-    endLevel = 6
-
-[outputFormats.MarkDown]
-  mediaType = "text/plain"
-  isPlainText = true
-  isHTML = false
-
-[mediaTypes."text/plain"]
-  suffixes = ["md"]
+  [markup.highlight]
+    noClasses = true
+    style = "bw"

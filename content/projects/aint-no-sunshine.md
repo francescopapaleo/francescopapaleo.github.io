@@ -1,13 +1,11 @@
 ---
 title: Ain't No Sunshine
 description: Single, released November 2025
+role: "Single"
 date: 2025-11-24
 featuredimage: /assets/img/aint-no-sunshine.webp
-featuredimagepreview: /assets/img/aint-no-sunshine.webp
-categories:
-  - creation
 tags:
-  - release
+  - music
   - electronic-music
 ---
 

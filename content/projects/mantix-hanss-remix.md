@@ -1,14 +1,11 @@
 ---
 title: Mantix — Hanss (Francesco Papaleo Remix)
 description: Remix released as a free download
+role: "Remix"
 date: 2026-02-18
 featuredimage: /assets/img/mantix-hanss-remix.webp
-featuredimagepreview: /assets/img/mantix-hanss-remix.webp
-categories:
-  - creation
 tags:
-  - release
-  - remix
+  - music
   - electronic-music
 ---
 

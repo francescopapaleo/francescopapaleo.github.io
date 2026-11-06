@@ -1,15 +1,14 @@
 ---
 title: Novecento Museum — Interactive Sound
 description: Interactive devices and sound content for the Novecento Museum in Florence, with Tempo Reale
+role: "Interactive sound"
 date: 2012-06-01
 draft: false
-categories:
-  - installation
 tags:
-  - interactive
-  - museum
-  - sound-design
+  - installation
   - florence
+  - interactive
+  - sound-design
 ---
 
 Since 2012 I have developed **interactive devices and sound content** for the [Novecento Museum](https://museonovecento.it/) in Florence, in partnership with [Tempo Reale](https://www.temporeale.it/), the centre for music research, production and education founded by Luciano Berio.

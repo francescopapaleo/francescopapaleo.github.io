@@ -1,15 +1,13 @@
 ---
 title: Trust Utopia
 description: Music for the Call for Artist
+role: "Composition"
 date: 2025-10-16
 featuredimage: /assets/img/CHEAP-Call-For-Artists-2025_TRUST-UTOPIA-ph-Margherita-Caprilli-16-1030x687.webp
-featuredimagepreview: /assets/img/CHEAP-Call-For-Artists-2025_TRUST-UTOPIA-ph-Margherita-Caprilli-16-1030x687.webp
-categories:
-  - creation
 tags:
-  - composition
-  - street-art
+  - music
   - bologna
+  - street-art
 ---
 
 CHEAP’s international open call brought together 601 artists, 952 submissions, and 209 posters installed throughout Bologna.

@@ -1,0 +1,68 @@
+{{- define "main" }}
+{{- $projects := (where site.RegularPages "Section" "projects").ByDate.Reverse }}
+
+{{- /* Tags used by at least one project; unknown ones are reported (typos, missing vocabulary). */}}
+{{- $used := slice }}
+{{- range $p := $projects }}
+    {{- range .Params.tags | default slice }}
+        {{- if not (in $used .) }}
+            {{- $used = $used | append . }}
+            {{- if eq (partial "tag-info.html" .).group "other" }}
+                {{- warnf "Tag %q is not in data/tags.yaml (first used by %s)" . $p.File.Path }}
+            {{- end }}
+        {{- end }}
+    {{- end }}
+{{- end }}
+
+<section id="work" aria-label="Work">
+    <div class="filters" role="group" aria-label="Filter work">
+        {{- range $group := slice "discipline" "place" "topic" }}
+        {{- $items := where (index hugo.Data.tags $group) "key" "in" $used }}
+        {{- if $items }}
+        <div class="frow{{ if ne $group "discipline" }} frow--quiet{{ end }}"{{ if eq $group "topic" }} id="topics"{{ end }}>
+            <span class="label">{{ $group | humanize }}</span>
+            <a href="{{ "/" | relURL }}#work" data-group="{{ $group }}" data-key=""><span>All</span></a>
+            {{- range $items }}
+            <a href="{{ printf "/tags/%s/" .key | relURL }}" data-group="{{ $group }}" data-key="{{ .key }}"><span>{{ .label }}</span></a>
+            {{- end }}
+            {{- if eq $group "place" }}
+            <span class="frow__end">
+                <button class="more label" id="more" type="button" aria-expanded="false" aria-controls="topics" hidden>More tags</button>
+                <label class="visually-hidden" for="q">Search work</label>
+                <input class="search" id="q" type="search" placeholder="Search" autocomplete="off">
+                <span class="count label" id="count" aria-live="polite"></span>
+            </span>
+            {{- end }}
+        </div>
+        {{- end }}
+        {{- end }}
+    </div>
+    <div class="wall" data-filterable>
+        {{- range $projects }}{{ partial "project-card.html" . }}{{ end }}
+    </div>
+    <p class="empty" id="empty" hidden>Nothing matches these filters. Pick “All” in a row to widen the selection.</p>
+</section>
+
+<section class="block" id="about">
+    <h2>About</h2>
+    <div class="prose">
+        {{ .Content }}
+        {{- with .Params.quote }}<p class="quote">{{ . }}</p>{{ end }}
+        {{- with .Params.workedWith }}<p class="with"><b>Worked with</b> {{ delimit . " · " }}</p>{{ end }}
+        <p><a class="arrow-link" href="{{ "/about/" | relURL }}">Full biography →</a></p>
+    </div>
+</section>
+
+<section class="block" id="contact">
+    <h2>Contact</h2>
+    <div class="prose">
+        <p class="motto">Humble serviteur du bruit.</p>
+        <ul class="links">
+            {{- range site.Params.links }}
+            <li><a href="{{ .url }}" rel="me noopener">{{ .name }}</a></li>
+            {{- end }}
+        </ul>
+        <p><a class="arrow-link" href="{{ "/newsletter/" | relURL }}">Subscribe to the newsletter →</a></p>
+    </div>
+</section>
+{{- end }}

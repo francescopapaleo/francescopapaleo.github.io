@@ -1,16 +1,9 @@
 ---
 title: Non Vengo dalla Luna
 description: Theater performance
+role: "Theatre sound design"
 date: 2010-12-14
 featuredimage: /assets/img/nvdl.webp
-featuredimagepreview: /assets/img/nvdl.webp
-categories:
-  - creation
-  - theater
-tags:
-  - sound-design
-  - composition
-  - theatre
 gallery:
   - src: /assets/img/frame603011.webp
     alt: Frame from Non Vengo dalla Luna performance
@@ -18,6 +11,10 @@ gallery:
   - src: /assets/img/generazioni_precarie.webp
     alt: Generazioni Precarie poster
     caption: Generazioni Precarie poster
+tags:
+  - music
+  - theatre
+  - sound-design
 ---
 
 _"Soggettiva attorno al 14 dicembre 2010"_
@@ -31,12 +28,6 @@ Non Vengo dalla Luna is a documentary theatre piece born in the aftermath of the
 - Dramaturgy: from testimonies originally published on Global Project
 
 - Special thanks: the authors of the original texts, Global Project, c.s. Tpo, Radio Kairòs, Oh! The Lady Stone
-
-{{< image
-    src="/assets/img/nvdl.webp"
-    alt="Non Vengo dalla Luna theatre performance"
-    caption="Non Vengo dalla Luna — performing at ..."
->}}
 
 ### 2011 Performances
 

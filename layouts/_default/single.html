@@ -1,0 +1,16 @@
+{{- define "main" }}
+<article class="page">
+    <header class="page__head">
+        <h1 class="page__title">{{ .Title }}</h1>
+        {{- if eq .Section "newsletter" }}
+        <p class="page__line label"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time> · Newsletter</p>
+        {{- end }}
+    </header>
+    <div class="prose">
+        {{ .Content }}
+    </div>
+    {{- if eq .Section "newsletter" }}
+    <a class="back arrow-link" href="{{ "/newsletter/" | relURL }}">← All issues</a>
+    {{- end }}
+</article>
+{{- end }}

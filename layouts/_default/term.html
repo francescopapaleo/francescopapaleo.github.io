@@ -1,42 +1,17 @@
-{{ define "title" -}}
-    {{- .Title }} - {{ T .Data.Singular | default .Data.Singular }} - {{ .Site.Title -}}
-{{- end }}
-
-{{- define "content" -}}
-    <div class="page archive">
-        <h2 class="single-title animate__animated animate__pulse animate__faster">
-            {{- $taxonomy := .Data.Singular -}}
-            {{- if eq $taxonomy "category" -}}
-                <i class="far fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;{{ .Title }}
-            {{- else if eq $taxonomy "tag" -}}
-                <i class="fas fa-tag fa-fw" aria-hidden="true"></i>&nbsp;{{ .Title }}
-            {{- else -}}
-                {{- printf "%v - %v" (T $taxonomy | default $taxonomy) .Title -}}
-            {{- end -}}
-        </h2>
-
-        {{- if .Pages -}}
-            {{- $pages := .Pages.GroupByDate "2006" -}}
-            {{- with .Site.Params.list.paginate | default .Site.Params.paginate -}}
-                {{- $pages = $.Paginate $pages . -}}
-            {{- else -}}
-                {{- $pages = .Paginate $pages -}}
-            {{- end -}}
-            {{- range $pages.PageGroups -}}
-                <h3 class="group-title">{{ .Key }}</h3>
-                {{- range .Pages -}}
-                    <article class="archive-item">
-                        <a href="{{ .RelPermalink }}" class="archive-item-link">
-                            {{- .Title | emojify -}}
-                        </a>
-                        <span class="archive-item-date">
-                            {{- $.Site.Params.list.dateFormat | default "01-02" | .Date.Format -}}
-                        </span>
-                    </article>
-                {{- end -}}
-            {{- end -}}
-            {{- partial "paginator.html" . -}}
-        {{- end -}}
+{{- /* One tag: same card wall as the homepage, unfiltered. Old area URLs (/music/, ...)
+     redirect here through aliases in content/tags/<tag>/_index.md, which can also hold intro text. */ -}}
+{{- define "main" }}
+{{- $info := partial "tag-info.html" (.Data.Term | urlize) }}
+<section class="page">
+    <header class="page__head">
+        <p class="page__line label">{{ if ne $info.group "other" }}{{ $info.group | humanize }}{{ else }}Tag{{ end }} · {{ len .Pages }} {{ cond (eq (len .Pages) 1) "work" "works" }}</p>
+        <h1 class="page__title">{{ cond (ne $info.group "other") $info.label .Title }}</h1>
+        {{- with .Description }}<p class="page__lede">{{ . }}</p>{{ end }}
+    </header>
+    {{- with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+    <div class="wall">
+        {{- range .Pages.ByDate.Reverse }}{{ partial "project-card.html" . }}{{ end }}
     </div>
+    <p><a class="back arrow-link" href="{{ "/" | relURL }}?tag={{ .Data.Term | urlize }}#work">Filter on the homepage →</a></p>
+</section>
 {{- end }}
-

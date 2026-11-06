@@ -1,14 +1,12 @@
 ---
 title: Touring & Live Sound
 description: Two decades of live sound engineering on tour with international artists
+role: "Live sound engineering"
 date: 2022-08-01
 draft: false
-categories:
-  - engineering
 tags:
+  - engineering
   - live-sound
-  - touring
-  - studio
 ---
 
 With over 15 years as a **sound engineer**, I have toured worldwide alongside international artists, specializing in live acts and studio work.

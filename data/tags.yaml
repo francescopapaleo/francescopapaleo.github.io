@@ -1,0 +1,32 @@
+# Controlled tag vocabulary. Groups drive the filter rows on the homepage
+# (in this order); `label` is what visitors see. A project tag missing from
+# this file is shown under "Other" and triggers a build warning.
+discipline:
+  - { key: music, label: Music }
+  - { key: performance, label: Performance }
+  - { key: engineering, label: Engineering }
+  - { key: installation, label: Installations }
+  - { key: research, label: Research }
+  - { key: theatre, label: Theatre }
+  - { key: collective, label: Collectives }
+place:
+  - { key: bologna, label: Bologna }
+  - { key: paris, label: Paris }
+  - { key: rome, label: Rome }
+  - { key: florence, label: Florence }
+  - { key: tokyo, label: Tokyo }
+topic:
+  - { key: electronic-music, label: Electronic music }
+  - { key: electroacoustic, label: Electroacoustic }
+  - { key: modular-synthesis, label: Modular synthesis }
+  - { key: club-culture, label: Club culture }
+  - { key: dance, label: Dance }
+  - { key: street-art, label: Street art }
+  - { key: spatial-audio, label: Spatial audio }
+  - { key: live-sound, label: Live sound }
+  - { key: sound-design, label: Sound design }
+  - { key: interactive, label: Interactive }
+  - { key: machine-learning, label: Machine learning }
+  - { key: dsp, label: DSP }
+  - { key: broadcast, label: Broadcast }
+  - { key: festival, label: Festival }

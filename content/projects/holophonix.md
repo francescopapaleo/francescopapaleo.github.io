@@ -1,17 +1,12 @@
 ---
 title: Holophonix
 description: Application engineering for the Holophonix immersive audio processor
+role: "Application engineering"
 date: 2022-01-01
 draft: false
-categories:
-  - engineering
-  - immersive-audio
 tags:
-  - holophonix
+  - engineering
   - spatial-audio
-  - immersive
-  - ambisonics
-  - wfs
 ---
 
 Since 2022 I work as **Application Engineer** at [Holophonix](https://holophonix.xyz/) — an immersive audio processor developed by [L-Acoustics](https://www.l-acoustics.com/), designed for real-time spatial audio rendering in live performance, installations, and architectural contexts.

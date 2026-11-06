@@ -3,29 +3,17 @@ title: Contact
 description: Get in touch with Francesco Papaleo
 ---
 
-# Get in touch
-
 _Humble Serviteur du Bruit_
 
 For collaborations, bookings, or just to talk about sound — reach out through any of these channels:
 
-<div class="contact-links">
-  <a class="contact-links__item" href="https://github.com/francescopapaleo" target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-github fa-fw" aria-hidden="true"></i> GitHub
-  </a>
-  <a class="contact-links__item" href="https://www.instagram.com/francesco.papaleo.music/" target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-instagram fa-fw" aria-hidden="true"></i> Instagram
-  </a>
-  <a class="contact-links__item" href="https://soundcloud.com/francescopapaleo" target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-soundcloud fa-fw" aria-hidden="true"></i> SoundCloud
-  </a>
-  <a class="contact-links__item" href="https://francescopapaleo.bandcamp.com/" target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-bandcamp fa-fw" aria-hidden="true"></i> Bandcamp
-  </a>
-  <a class="contact-links__item" href="https://www.linkedin.com/in/francesco-papaleo/" target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-linkedin fa-fw" aria-hidden="true"></i> LinkedIn
-  </a>
-</div>
+<ul class="links">
+  <li><a href="https://github.com/francescopapaleo" rel="noopener">GitHub</a></li>
+  <li><a href="https://www.instagram.com/francesco.papaleo.music/" rel="noopener">Instagram</a></li>
+  <li><a href="https://soundcloud.com/francescopapaleo" rel="noopener">SoundCloud</a></li>
+  <li><a href="https://francescopapaleo.bandcamp.com/" rel="noopener">Bandcamp</a></li>
+  <li><a href="https://www.linkedin.com/in/francesco-papaleo/" rel="noopener">LinkedIn</a></li>
+</ul>
 
 ## Newsletter
 
@@ -35,8 +23,6 @@ Occasional news on releases, performances, and projects ([read past issues](/new
 
 ## Support
 
-<div class="contact-links">
-  <a class="contact-links__item" href="https://c.org/P588wcqqgh" target="_blank" rel="noopener noreferrer">
-    <i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i> Protéger la free party — petition against PPL 1133
-  </a>
-</div>
+<ul class="links">
+  <li><a href="https://c.org/P588wcqqgh" rel="noopener">Protéger la free party — petition against PPL 1133</a></li>
+</ul>

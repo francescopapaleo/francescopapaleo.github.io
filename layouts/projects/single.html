@@ -1,49 +1,35 @@
-{{- define "title" -}}
-    {{- .Title }} - {{ .Site.Title -}}
-{{- end -}}
+{{- define "main" }}
+{{- $img := .Params.featuredimage }}
+<article class="page">
+    <header class="page__head">
+        <h1 class="page__title">{{ .Title }}</h1>
+        <p class="page__line label">{{ .Date.Format "2006" }}{{ with .Params.role }} · {{ . }}{{ end }}</p>
+        {{- with .Description }}<p class="page__lede">{{ . }}</p>{{ end }}
+        {{- with .Params.tags }}
+        <ul class="page__tags label" aria-label="Tags">
+            {{- range . }}
+            <li><a href="{{ printf "/tags/%s/" (. | urlize) | relURL }}">{{ (partial "tag-info.html" .).label }}</a></li>
+            {{- end }}
+        </ul>
+        {{- end }}
+    </header>
 
-{{- define "content" -}}
-    {{- $page := . -}}
-    {{- $params := .Scratch.Get "params" -}}
-    <div class="page single special">
-        {{- /* Title */ -}}
-        <h1 class="single-title animate__animated animate__pulse animate__faster">
-            {{- .Title -}}
-        </h1>
-
-        {{- /* Subtitle */ -}}
-        {{- with $params.subtitle -}}
-            <h2 class="single-subtitle">{{ . }}</h2>
-        {{- end -}}
-
-        {{- /* Content */ -}}
-        <div class="content" id="content">
-            {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
-        </div>
-
-        {{- /* Gallery */ -}}
-        {{- with .Params.gallery -}}
-            {{- partial "gallery.html" (dict "Page" $page "Items" .) -}}
-        {{- end -}}
-
-        {{- /* Categories & Tags */ -}}
-        {{- if or .Params.categories .Params.tags -}}
-            <div class="project-meta">
-                {{- range .Params.categories -}}
-                    <a class="project-meta__item" href="{{ printf "/categories/%v/" (. | urlize) | relURL }}">
-                        <i class="far fa-folder fa-fw" aria-hidden="true"></i>{{ . }}
-                    </a>
-                {{- end -}}
-                {{- range .Params.tags -}}
-                    <a class="project-meta__item" href="{{ printf "/tags/%v/" (. | urlize) | relURL }}">
-                        <i class="fas fa-tag fa-fw" aria-hidden="true"></i>{{ . }}
-                    </a>
-                {{- end -}}
-            </div>
-        {{- end -}}
-
-        {{- /* Comment */ -}}
-        {{- partial "comment.html" . -}}
+    {{- if $img }}
+    <figure class="hero">
+        <img src="{{ $img | relURL }}" alt="{{ .Params.featuredimageAlt | default .Title }}">
+    </figure>
+    {{- else }}
+    <div class="hero hero--pattern" aria-hidden="true">
+        <canvas data-pattern="{{ partial "pattern-kind.html" . }}" data-seed="{{ .File.ContentBaseName }}"></canvas>
     </div>
-{{- end -}}
+    {{- end }}
 
+    <div class="prose">
+        {{ .Content }}
+    </div>
+
+    {{- with .Params.gallery }}{{ partial "gallery.html" . }}{{ end }}
+
+    <a class="back arrow-link" href="{{ "/" | relURL }}#work">← All work</a>
+</article>
+{{- end }}

@@ -1,0 +1,25 @@
+{{- /* Full masthead on the homepage, a smaller one elsewhere. */ -}}
+<header class="site-header{{ if not .IsHome }} site-header--small{{ end }}">
+    {{- if .IsHome }}
+    <h1 class="site-name">{{ site.Title }}</h1>
+    {{- else }}
+    <a class="site-name" href="{{ "/" | relURL }}">{{ site.Title }}</a>
+    {{- end }}
+    <nav class="site-nav label" aria-label="Main">
+        {{- $current := . }}
+        {{- range site.Menus.main }}
+        <a href="{{ .URL | relURL }}"{{ if $current.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a>
+        {{- end }}
+        <button class="theme-toggle label" type="button" aria-label="Switch theme">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M8 1a7 7 0 0 1 0 14z" fill="currentColor"/></svg>
+            <span>Theme</span>
+        </button>
+    </nav>
+</header>
+{{- if .IsHome }}
+<div class="sub">
+    <span class="label">{{ site.Params.disciplines }}</span>
+    <span class="motto">{{ site.Params.subtitle }}</span>
+</div>
+{{- end }}
+<canvas class="band" aria-hidden="true"></canvas>

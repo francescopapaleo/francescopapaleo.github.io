@@ -1,15 +1,13 @@
 ---
 title: Fuck War
 description: Music for the Call for Artist
+role: "Composition"
 date: 2024-09-10
 featuredimage: /assets/img/fuck_war.webp
-featuredimagepreview: /assets/img/fuck_war.webp
-categories:
-  - creation
 tags:
-  - composition
-  - street-art
+  - music
   - bologna
+  - street-art
 ---
 
 Music for CHEAP’s 2024 call for artists: a manifesto against war that took over the streets of Bologna through large-scale poster interventions.

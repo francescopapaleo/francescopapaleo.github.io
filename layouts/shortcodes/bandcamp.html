@@ -5,9 +5,9 @@
 {{- $id := .Get "id" -}}
 {{- $title := .Get "title" -}}
 {{- $url := .Get "url" -}}
-<div class="bandcamp-embed">
+<div class="embed embed--bandcamp">
     <iframe
-        src="https://bandcamp.com/EmbeddedPlayer/{{ $type }}={{ $id }}/size=large/bgcol=212121/linkcol=9a64ff/tracklist=false/artwork=small/transparent=true/"
+        src="https://bandcamp.com/EmbeddedPlayer/{{ $type }}={{ $id }}/size=large/bgcol=ffffff/linkcol=0a0a0a/tracklist=false/artwork=small/transparent=true/"
         seamless
         loading="lazy"
         title="{{ $title }}">

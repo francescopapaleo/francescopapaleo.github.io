@@ -1,0 +1,7 @@
+{{- /* Which generated pattern a project without an image gets (drawn by site.js):
+     research -> "wave" (bent waveform lines), installation -> "dots" (halftone field),
+     anything else -> "rings" (two-source interference). */ -}}
+{{- $tags := .Params.tags | default slice -}}
+{{- $kind := "rings" -}}
+{{- if in $tags "research" }}{{ $kind = "wave" }}{{ else if in $tags "installation" }}{{ $kind = "dots" }}{{ end -}}
+{{- return $kind -}}

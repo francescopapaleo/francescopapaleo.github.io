@@ -1,16 +1,14 @@
 ---
 title: Concrete Bologna Elettroacustica
 description: Electro-acoustic and acousmatic music collective
+role: "Electroacoustic collective"
 date: 2010-09-01
 featuredimage: /assets/img/concrete.webp
-featuredimagepreview: /assets/img/concrete.webp
-categories:
-  - creation
-  - collective
 tags:
-  - electroacoustic
-  - acousmatic
+  - music
+  - collective
   - bologna
+  - electroacoustic
 ---
 
 Concrete Bologna Elettroacustica is an electro-acoustic and acousmatic collective born in Bologna in 2010.
@@ -25,10 +23,4 @@ During our activity, we have created several projects: HOLO Laptop Ensemble, ORF
     description="Collective of electronic musicians active in Bologna since 2010, promoting experimental electroacoustic listening across self-built diffusion systems and interdisciplinary projects."
     label="Collective Site"
     cta="Visit concretebologna.weebly.com →"
->}}
-
-{{< image
-    src="/assets/img/concrete.webp"
-    alt="Concrete Bologna Elettroacustica performance"
-    caption="Concrete Bologna Elettroacustica, Bologna."
 >}}

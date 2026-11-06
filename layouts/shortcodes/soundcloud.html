@@ -3,7 +3,7 @@
 {{- $url := .Get "url" -}}
 {{- $title := .Get "title" | default "SoundCloud player" -}}
 {{- $height := .Get "height" | default "450" -}}
-<div class="soundcloud-embed">
+<div class="embed">
     <iframe
         width="100%"
         height="{{ $height }}"
@@ -12,7 +12,7 @@
         loading="lazy"
         allow="autoplay"
         title="{{ $title }}"
-        src="https://w.soundcloud.com/player/?url={{ $url | urlquery }}&color=%239a64ff&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false">
+        src="https://w.soundcloud.com/player/?url={{ $url | urlquery }}&color=%230a0a0a&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false">
     </iframe>
     <a href="{{ $url }}" target="_blank" rel="noopener noreferrer">{{ $title }}</a>
 </div>

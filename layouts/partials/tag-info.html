@@ -1,0 +1,13 @@
+{{- /* Looks up a tag key in data/tags.yaml.
+     Returns dict "key" "label" "group"; unknown tags get group "other" and a humanized label.
+     Usage: {{ $t := partial "tag-info.html" "music" }} */ -}}
+{{- $key := . -}}
+{{- $found := dict "key" $key "label" ($key | humanize) "group" "other" -}}
+{{- range $group, $items := hugo.Data.tags -}}
+    {{- range $items -}}
+        {{- if eq .key $key -}}
+            {{- $found = dict "key" $key "label" .label "group" $group -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+{{- return $found -}}

@@ -1,0 +1,8 @@
+{{- /* Inline image with optional caption (replaces LoveIt's shortcode of the same name).
+     Usage: {{< image src="/assets/img/x.webp" alt="..." caption="..." >}} */ -}}
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default (.Get "caption") | default "" -}}
+<figure class="figure">
+    <img src="{{ $src | relURL }}" alt="{{ $alt }}" loading="lazy" decoding="async">
+    {{- with .Get "caption" }}<figcaption>{{ . | safeHTML }}</figcaption>{{ end }}
+</figure>

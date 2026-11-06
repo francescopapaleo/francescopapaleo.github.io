@@ -1,14 +1,11 @@
 ---
 title: The Maze
 description: oh!theladystone debut album, released May 2016
+role: "Album"
 date: 2016-05-01
 featuredimage: /assets/img/the-maze.webp
-featuredimagepreview: /assets/img/the-maze.webp
-categories:
-  - creation
 tags:
-  - release
-  - band
+  - music
   - electronic-music
 ---
 

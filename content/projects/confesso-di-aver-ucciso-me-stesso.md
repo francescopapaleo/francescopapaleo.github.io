@@ -1,18 +1,16 @@
 ---
 title: Confesso di aver ucciso me stesso
 description: Live electroacoustic music for Antonio Montanile's choreography — Premio Equilibrio Roma 2010
+role: "Live electronics for dance"
 date: 2010-02-06
 featuredimage: /assets/img/equilibrio-2010.webp
-featuredimagepreview: /assets/img/equilibrio-2010.webp
-area: performance
-categories:
-  - creation
-  - theater
 tags:
+  - performance
+  - theatre
+  - music
+  - rome
   - electroacoustic
   - dance
-  - live-electronics
-  - rome
 ---
 
 #### _studio per un trio attraversando me_
@@ -24,12 +22,6 @@ tags:
 **Confesso di aver ucciso me stesso — studio per un trio attraversando me** is a choreography by **Antonio Montanile**, for which I created and performed the **electroacoustic music live**: microphones placed on stage and on Antonio's body captured the sounds of the performance, which I processed in real time with effects and manipulations of every sort in Ableton Live. Nothing was pre-recorded — everything happened on stage, as it unfolded.
 
 The piece was one of the eight finalist studies of the **Premio Equilibrio Roma 2010** for contemporary dance (third edition of the prize), hosted by the Auditorium Parco della Musica in Rome during the sixth edition of **Equilibrio — Festival della Nuova Danza**. Open to emerging artists working in Italy, the prize invited original projects destined to evolve into full dance productions; the finalists presented their studies to the public and an international jury, with the winner receiving a production grant and an invitation to the 2011 festival. We performed at the Teatro Studio on the 6th of February 2010.
-
-{{< image
-    src="/assets/img/equilibrio-2010.webp"
-    alt="Equilibrio — Festival della Nuova Danza 2010 programme cover"
-    caption="Equilibrio — Festival della Nuova Danza, Rome 2010."
->}}
 
 **Credits:**
 

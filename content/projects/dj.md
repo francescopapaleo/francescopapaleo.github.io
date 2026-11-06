@@ -1,13 +1,11 @@
 ---
 title: DJ Gigs
 description: If I can't dance it's not my revolution
+role: "DJ sets"
 date: 2025-01-01
 featuredimage: /assets/img/DSCF3448-atelieroz.webp
-featuredimagepreview: /assets/img/DSCF3448-atelieroz.webp
-categories:
-  - dj
 tags:
-  - dj-set
+  - performance
   - club-culture
 ---
 

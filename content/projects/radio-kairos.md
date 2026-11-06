@@ -1,15 +1,13 @@
 ---
 title: Radio Kairos 105.85 FM
 description: System design for a community radio station in Bologna
+role: "Broadcast system design"
 date: 2007-01-01
 draft: false
-categories:
-  - engineering
 tags:
-  - radio
-  - broadcast
-  - system-design
+  - engineering
   - bologna
+  - broadcast
 ---
 
 From 2007 to 2010 I was **System Designer** for **Radio Kairos 105.85 FM**, a community radio station in Bologna — designing and maintaining the broadcast and studio infrastructure.

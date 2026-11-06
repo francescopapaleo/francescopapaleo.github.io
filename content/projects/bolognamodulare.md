@@ -1,17 +1,16 @@
 ---
 title: Bologna Modulare
 description: Modular synthesizer collective
+role: "Modular collective"
 date: 2021-03-01
 featuredimage: /assets/img/bolognamodulare.webp
-featuredimagepreview: /assets/img/bolognamodulare.webp
-categories:
-  - collective
-  - creation
 tags:
-  - modular-synthesis
-  - live-performance
-  - electronic-music
+  - music
+  - performance
+  - collective
   - bologna
+  - modular-synthesis
+  - electronic-music
 ---
 
 Bologna Modulare (BoMo) is an informal, distributed hub across Emilia-Romagna for electronic musicians exploring modular synthesizer systems. Born in early 2021, the collective is non-hierarchical and genre-agnostic: ambient, drone, industrial noise, techno, and experimental soundscapes coexist, unified by the instrument itself — the modular system as an activator of experiences rather than a stylistic boundary.

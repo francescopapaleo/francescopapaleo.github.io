@@ -1,15 +1,14 @@
 ---
 title: BVIO
 description: DJ set and temporary art installation
+role: "DJ set · installation"
 date: 2023-02-04
 featuredimage: /assets/img/bvio.webp
-featuredimagepreview: /assets/img/bvio.webp
-categories:
-  - installation
 tags:
-  - dj-set
   - installation
+  - performance
   - bologna
+  - club-culture
 ---
 
 #### _Abbiamo finito i buoni sentimenti_
