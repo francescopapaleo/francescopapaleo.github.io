@@ -41,7 +41,7 @@ enableGitInfo = true
     weight = 4
 
 [params]
-  description = "Sound designer and engineer working across music, immersive audio, and interactive art."
+  description = "Electronic musician and engineer working at the crossroads of music, sound and technology."
   subtitle = "Listen on the shoulders of giants"
   disciplines = "Music · Sound design · Engineering · Immersive audio"
   image = "/assets/img/avatar.png"

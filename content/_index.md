@@ -1,6 +1,6 @@
 ---
 title: Francesco Papaleo
-description: Sound designer and engineer working across music, immersive audio, and interactive art.
+description: Electronic musician and engineer working at the crossroads of music, sound and technology.
 # Shown in the homepage About section, under the bio below.
 quote: Art begins where ego ends.
 workedWith: [Holophonix, teamLab, Neutone, La Villette, Tempo Reale, roBOt Festival, CHEAP]
